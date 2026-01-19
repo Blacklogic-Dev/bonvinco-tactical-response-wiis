@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bonvinco Tactical Response</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+  /* Full page background */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background: #111;
+    color: white;
+  }
+
+  .landing {
+    background: url('respect.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Date & Time */
+  .datetime {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .datetime i { margin-right: 6px; color: gold; }
+
+  /* Typewriter effect */
+  .typewriter h1, .typewriter h2 {
+    margin: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid black;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+  }
+  .typewriter h1 { font-size: 2.2rem; color: #FFD700; }
+  .typewriter h2 { font-size: 2.8rem; color: #FFD700; }
+
+  /* Buttons */
+  .buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .discover-btn, .toggle-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  }
+  .discover-btn:hover, .toggle-btn:hover { transform: scale(1.05); }
+
+  /* Toggle Switch */
+  .switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .switch-label { margin-bottom: 6px; text-align: center; }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  .switch input { display:none; }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 34px;
+    top:0; left:0; right:0; bottom:0;
+    transition: .4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px; width: 26px;
+    left: 4px; bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+  }
+  input:checked + .slider {
+    background-color: #FFD700;
+  }
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  /* Footer */
+  footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.8rem;
+    color: #ccc;
+  }
+</style>
+</head>
+<body>
+
+<div class="landing">
+  <!-- Date & Time -->
+  <div class="datetime">
+    <div><i class="fas fa-calendar-alt"></i> 2026</div>
+    <div><i class="fas fa-clock"></i> <span id="time">--:--:--</span></div>
+  </div>
+
+  <!-- Typewriter -->
+  <div class="typewriter">
+    <h1>Welcome To Bovinco</h1>
+    <h2><span id="dynamicText"></span></h2>
+    <p>Your Safety. Our Duty.</p>
+  </div>
+
+  <!-- Buttons -->
+  <div class="buttons">
+    <button class="discover-btn" onclick="goToService()">
+      Discover <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>
+
+  <!-- Toggle -->
+  <div class="switch-container">
+    <div class="switch-label">
+      <h3>Switch Division</h3>
+      <p>Switch to Bonvinco Holdings</p>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="divisionSwitch">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <footer>⚡️Powered by BlackLogic Technologies Pty Ltd 💻</footer>
+</div>
+
+<script>
+  // Real-time clock
+  function updateTime() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2,'0');
+    const m = String(now.getMinutes()).padStart(2,'0');
+    const s = String(now.getSeconds()).padStart(2,'0');
+    document.getElementById('time').innerText = `${h}:${m}:${s}`;
+  }
+  setInterval(updateTime, 1000);
+  updateTime();
+
+  // Discover button redirect with loading effect
+  function goToService() {
+    const btnIcon = document.querySelector('.discover-btn i');
+    btnIcon.classList.add('fa-spin');
+    setTimeout(() => { window.location.href = 'service.html'; }, 1200);
+  }
+
+  // Toggle division
+  const divisionSwitch = document.getElementById('divisionSwitch');
+  divisionSwitch.addEventListener('change', () => {
+    if(divisionSwitch.checked){
+      alert('Switched to Bonvinco Holdings'); 
+      // Add dynamic changes if needed
+    } else {
+      alert('Switched to Bonvinco Tactical Response');
+    }
+  });
+
+  // Typewriter effect with erase
+  const text = "Tactical Response";
+  let index = 0;
+  let isDeleting = false;
+  const speed = 150;
+  const delay = 1000;
+  const dynamicText = document.getElementById('dynamicText');
+
+  function typeWriter() {
+    if(!isDeleting) {
+      dynamicText.innerText = text.substring(0, index + 1);
+      index++;
+      if(index === text.length){
+        isDeleting = true;
+        setTimeout(typeWriter, delay);
+        return;
+      }
+    } else {
+      dynamicText.innerText = text.substring(0, index - 1);
+      index--;
+      if(index === 0){
+        isDeleting = false;
+        setTimeout(typeWriter, speed);
+        return;
+      }
+    }
+    setTimeout(typeWriter, speed);
+  }
+  typeWriter();
+</script>
+
+</body>
+</html>

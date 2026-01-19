@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bonvinco Tactical Response - Job Ads</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+  body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#000;
+    color:#fff;
+    padding:20px;
+  }
+  /* Right Drawer */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0; /* Right side */
+  height: 100%;
+  width: 80px; /* Drawer width */
+  background: rgba(0, 0, 0, 0.8); /* Transparent black */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  gap: 30px;
+  z-index: 9999;
+}
+
+/* Drawer Items */
+.drawer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: gold; /* Icons and text gold */
+  font-weight: bold;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.drawer-item i {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+/* Hover Effect */
+.drawer-item:hover {
+  color: #FFD700; /* Bright gold */
+  transform: translateX(-5px); /* Slide left on hover */
+}
+
+  h1 {
+    margin-bottom:20px;
+  }
+
+  .gold { color:#d4af37; }
+
+  .grid {
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  @media(min-width:700px){
+    .grid{ grid-template-columns:1fr 1fr; }
+  }
+
+  .card {
+    background:#111;
+    border:1px solid #333;
+    border-radius:10px;
+    padding:14px;
+  }
+
+  .job-image {
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:8px;
+    margin-bottom:10px;
+  }
+
+  .job-title {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:18px;
+    margin-bottom:6px;
+  }
+
+  .job-title i {
+    color:#d4af37;
+  }
+
+  .status {
+    display:inline-block;
+    margin-top:6px;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    animation: breathe 2.2s infinite ease-in-out;
+  }
+
+  .urgent { background:#c40000; }
+  .recruitment { background:#d4af37; color:#111; }
+  .neutral { background:#0f8a3b; }
+
+  @keyframes breathe {
+    0% { transform:scale(1); opacity:1; }
+    50% { transform:scale(1.08); opacity:0.7; }
+    100% { transform:scale(1); opacity:1; }
+  }
+
+  .receipt {
+    background:#fff;
+    color:#000;
+    margin-top:12px;
+    padding:12px;
+    border-radius:8px;
+    font-family:monospace;
+  }
+  /* Toggle Button */
+.drawer-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  background: rgba(0,0,0,0.7);
+  border: none;
+  color: gold;
+  font-size: 1.5rem;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.drawer-toggle:hover {
+  background: rgba(0,0,0,0.9);
+}
+
+/* Right Drawer */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -80px; /* Start hidden */
+  height: 100%;
+  width: 80px;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  gap: 30px;
+  z-index: 9999;
+  transition: right 0.3s;
+}
+
+/* Drawer Items */
+.drawer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: gold;
+  font-weight: bold;
+  transition: transform 0.3s, color 0.3s;
+}
+.drawer-item i {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.drawer-item:hover {
+  color: #FFD700;
+  transform: translateX(-5px);
+}
+
+/* Drawer Active */
+.drawer.open {
+  right: 0;
+}
+
+  .receipt h4 {
+    margin:0 0 8px 0;
+  }
+
+  .receipt ul {
+    margin:0;
+    padding-left:18px;
+  }
+
+  .download-btn {
+    margin-top:10px;
+    padding:7px 12px;
+    background:#d4af37;
+    color:#111;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+  }
+
+  .download-btn i {
+    margin-right:6px;
+  }
+</style>
+</head>
+
+<body>
+
+<h1 class="gold">Bonvinco Tactical Response – Job Ads</h1>
+<!-- Toggle Button -->
+<button id="drawerToggle" class="drawer-toggle">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- Right Side Drawer -->
+<div class="drawer" id="drawer">
+
+  <a href="index.html" class="drawer-item">
+    <i class="fas fa-home"></i>
+    <span>Home</span>
+  </a>
+
+  <a href="service.html" class="drawer-item">
+    <i class="fas fa-concierge-bell"></i>
+    <span>Services</span>
+  </a>
+
+  <a href="about.html" class="drawer-item">
+    <i class="fas fa-info-circle"></i>
+    <span>About Us</span>
+  </a>
+
+  <a href="jobs.html" class="drawer-item">
+    <i class="fas fa-briefcase"></i>
+    <span>Jobs</span>
+  </a>
+
+  <a href="ads.html" class="drawer-item">
+    <i class="fas fa-bullhorn"></i>
+    <span>Ads</span>
+  </a>
+
+  <a href="contact.html" class="drawer-item">
+    <i class="fas fa-envelope"></i>
+    <span>Contact</span>
+  </a>
+
+</div>
+
+</div>
+<div class="grid">
+
+  <!-- JOB 1 -->
+  <div class="card">
+    <img src="war.jpg" class="job-image" alt="Tactical Guard">
+
+    <div class="job-title">
+      <i class="fas fa-shield-halved"></i>
+      Tactical Guard
+    </div>
+
+    <span class="status urgent">Urgent</span>
+
+    <div class="receipt">
+      <h4>Bonvinco Tactical Response</h4>
+      <strong>Job Title:</strong> Tactical Guard
+      <br><br>
+      <strong>Minimum Requirements:</strong>
+      <ul>
+        <li>Grade 10</li>
+        <li>Firearm Competence</li>
+        <li>PSIRA Grade C</li>
+      </ul>
+    </div>
+
+    <button class="download-btn" onclick="downloadPDF('Tactical Guard')">
+      <i class="fas fa-download"></i> Download Requirements
+    </button>
+  </div>
+
+  <!-- JOB 2 -->
+  <div class="card">
+    <img src="enforce.jpg" class="job-image" alt="Tactical Driver">
+
+    <div class="job-title">
+      <i class="fas fa-truck-fast"></i>
+      Tactical Driver
+    </div>
+
+    <span class="status recruitment">Recruitment</span>
+
+    <div class="receipt">
+      <h4>Bonvinco Tactical Response</h4>
+      <strong>Job Title:</strong> Tactical Driver
+      <br><br>
+      <strong>Minimum Requirements:</strong>
+      <ul>
+        <li>Grade 10</li>
+        <li>Firearm Competence</li>
+        <li>C10 Driver’s License</li>
+      </ul>
+    </div>
+
+    <button class="download-btn" onclick="downloadPDF('Tactical Driver')">
+      <i class="fas fa-download"></i> Download Requirements
+    </button>
+  </div>
+
+  <!-- JOB 3 -->
+  <div class="card">
+    <img src="peace.jpg" class="job-image" alt="Drone Pilot">
+
+    <div class="job-title">
+      <i class="fas fa-drone"></i>
+      Drone Pilot
+    </div>
+
+    <span class="status neutral">Neutral</span>
+
+    <div class="receipt">
+      <h4>Bonvinco Tactical Response</h4>
+      <strong>Job Title:</strong> Drone Pilot
+      <br><br>
+      <strong>Minimum Requirements:</strong>
+      <ul>
+        <li>Drone Operation Certificate</li>
+        <li>Surveillance Experience</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+  <img src="law.jpg" class="job-image" alt="Criminal Attorney">
+
+  <h3>
+    <i class="fas fa-gavel gold"></i>
+    Criminal Attorney
+  </h3>
+
+  <p class="status neutral breathe">Status: Neutral</p>
+
+  <div class="requirements">
+    <strong>Bonvinco Tactical Response</strong><br>
+    <strong>Job Title:</strong> Criminal Attorney<br><br>
+
+    <strong>Minimum Requirements:</strong>
+    <ul>
+      <li>BSc / Diploma in Law or relevant qualification</li>
+      <li>Valid Criminal Clearance Certificate</li>
+    </ul>
+  </div>
+</div>
+
+    <button class="download-btn" onclick="downloadPDF('Drone Pilot')">
+      <i class="fas fa-download"></i> Download Requirements
+    </button>
+  </div>
+
+</div>
+
+<script>
+    const drawer = document.getElementById('drawer');
+const toggleBtn = document.getElementById('drawerToggle');
+
+toggleBtn.addEventListener('click', () => {
+  drawer.classList.toggle('open');
+});
+function downloadPDF(title){
+  const content =
+`Bonvinco Tactical Response
+
+Job Title: ${title}
+
+Minimum Requirements:
+- Refer to job advertisement`;
+
+  const blob = new Blob([content], { type: 'application/pdf' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = title.replaceAll(' ','_') + "_Requirements.pdf";
+  a.click();
+  URL.revokeObjectURL(url);
+}
+</script>
+
+</body>
+</html>
