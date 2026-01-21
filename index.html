@@ -184,14 +184,16 @@
 
   // Toggle division
   const divisionSwitch = document.getElementById('divisionSwitch');
-  divisionSwitch.addEventListener('change', () => {
-    if(divisionSwitch.checked){
-      alert('Switched to Bonvinco Holdings'); 
-      // Add dynamic changes if needed
-    } else {
-      alert('Switched to Bonvinco Tactical Response');
-    }
-  });
+  if (divisionSwitch) {
+    divisionSwitch.addEventListener('change', () => {
+      if (divisionSwitch.checked) {
+        // Redirect to Bonvinco Holdings when switched on
+        window.location.href = 'http://bovincoholdings.com/index.html';
+      } else {
+        // Optionally handle switch-off (no redirect)
+      }
+    });
+  }
 
   // Typewriter effect with erase
   const text = "Tactical Response";
