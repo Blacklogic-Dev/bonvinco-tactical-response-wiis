@@ -22,16 +22,15 @@ header {
   overflow: hidden;
 }
 
-
 .header-slider {
-  width: 100%;
-  height: 100%;
   display: flex;
-  animation: slideImages 18s infinite;
+  width: 1000%; /* 10 slides × 100% */
+  height: 100%;
+  animation: slideImages 20s infinite linear;
 }
 
 .slide {
-  flex: 0 0 100%;
+  flex: 0 0 10%; /* 100% ÷ 10 slides */
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -44,10 +43,28 @@ header {
   z-index: 2;
 }
 
+/* Animate all 10 slides */
 @keyframes slideImages {
-  0%, 30%   { transform: translateX(0); }
-  35%, 65%  { transform: translateX(-100%); }
-  70%, 100% { transform: translateX(-200%); }
+  0%   { transform: translateX(0%); }
+  10%  { transform: translateX(0%); }
+  11%  { transform: translateX(-10%); }
+  20%  { transform: translateX(-10%); }
+  21%  { transform: translateX(-20%); }
+  30%  { transform: translateX(-20%); }
+  31%  { transform: translateX(-30%); }
+  40%  { transform: translateX(-30%); }
+  41%  { transform: translateX(-40%); }
+  50%  { transform: translateX(-40%); }
+  51%  { transform: translateX(-50%); }
+  60%  { transform: translateX(-50%); }
+  61%  { transform: translateX(-60%); }
+  70%  { transform: translateX(-60%); }
+  71%  { transform: translateX(-70%); }
+  80%  { transform: translateX(-70%); }
+  81%  { transform: translateX(-80%); }
+  90%  { transform: translateX(-80%); }
+  91%  { transform: translateX(-90%); }
+  100% { transform: translateX(-90%); }
 }
 
 /* ================= SECTION TITLE ================= */
@@ -121,65 +138,7 @@ input:checked + .slider:before {
   gap: 20px;
   padding: 20px;
 }
-/* Toggle Button */
-.drawer-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 10000;
-  background: rgba(0,0,0,0.7);
-  border: none;
-  color: gold;
-  font-size: 1.5rem;
-  padding: 10px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.drawer-toggle:hover {
-  background: rgba(0,0,0,0.9);
-}
 
-/* Right Drawer */
-.drawer {
-  position: fixed;
-  top: 0;
-  right: -80px; /* Start hidden */
-  height: 100%;
-  width: 80px;
-  background: rgba(0,0,0,0.8);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 40px;
-  gap: 30px;
-  z-index: 9999;
-  transition: right 0.3s;
-}
-
-/* Drawer Items */
-.drawer-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: gold;
-  font-weight: bold;
-  transition: transform 0.3s, color 0.3s;
-}
-.drawer-item i {
-  font-size: 2rem;
-  margin-bottom: 5px;
-}
-.drawer-item:hover {
-  color: #FFD700;
-  transform: translateX(-5px);
-}
-
-/* Drawer Active */
-.drawer.open {
-  right: 0;
-}
 .service {
   width: 160px;
   background: #111;
@@ -224,6 +183,64 @@ input:checked + .slider:before {
   font-weight: bold;
 }
 
+/* ================= DRAWER ================= */
+.drawer-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  background: rgba(0,0,0,0.7);
+  border: none;
+  color: gold;
+  font-size: 1.5rem;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.drawer-toggle:hover {
+  background: rgba(0,0,0,0.9);
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -80px;
+  height: 100%;
+  width: 80px;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  gap: 30px;
+  z-index: 9999;
+  transition: right 0.3s;
+}
+
+.drawer.open { right: 0; }
+
+.drawer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: gold;
+  font-weight: bold;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.drawer-item i {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.drawer-item:hover {
+  color: #FFD700;
+  transform: translateX(-5px);
+}
+
 /* ================= FOOTER ================= */
 footer {
   text-align: center;
@@ -236,95 +253,90 @@ footer {
 
 <body>
 
-<!-- ===== HEADER SLIDER ===== -->
 <header>
   <div class="header-slider">
-    <div class="slide" style="background-image:url('service1.jpg')"></div>
+    <div class="slide" style="background-image:url('task1.jpg')"></div>
     <div class="slide" style="background-image:url('tactical2.jpg')"></div>
-    <div class="slide" style="background-image:url('service3.jpg')"></div>
+    <div class="slide" style="background-image:url('task2.jpg')"></div>
+    <div class="slide" style="background-image:url('task3.jpg')"></div>
+    <div class="slide" style="background-image:url('task4.jpg')"></div>
+    <div class="slide" style="background-image:url('task5.jpg')"></div>
+    <div class="slide" style="background-image:url('task6.jpg')"></div>
+    <div class="slide" style="background-image:url('task7.jpg')"></div>
+    <div class="slide" style="background-image:url('task8.jpg')"></div>
+    <div class="slide" style="background-image:url('task9.jpg')"></div>
+    <div class="slide" style="background-image:url('task10.jpg')"></div>
   </div>
   <div class="header-overlay"></div>
 </header>
 
-<!-- ===== TITLE UNDER SLIDER ===== -->
 <div class="section-title">
   <h1 id="servicesTitle"></h1>
 </div>
-<!-- Toggle Button -->
+
 <button id="drawerToggle" class="drawer-toggle">
   <i class="fas fa-bars"></i>
 </button>
 
-<!-- Right Side Drawer -->
 <div class="drawer" id="drawer">
-
   <a href="index.html" class="drawer-item">
     <i class="fas fa-home"></i>
     <span>Home</span>
   </a>
-
   <a href="service.html" class="drawer-item">
     <i class="fas fa-concierge-bell"></i>
     <span>Services</span>
   </a>
-
   <a href="about.html" class="drawer-item">
     <i class="fas fa-info-circle"></i>
     <span>About Us</span>
   </a>
-
   <a href="jobs.html" class="drawer-item">
     <i class="fas fa-briefcase"></i>
     <span>Jobs</span>
   </a>
-
   <a href="ads.html" class="drawer-item">
     <i class="fas fa-bullhorn"></i>
     <span>Ads</span>
   </a>
-
   <a href="contact.html" class="drawer-item">
     <i class="fas fa-envelope"></i>
     <span>Contact</span>
   </a>
+</div>
 
-</div>
-</div>
-<!-- ===== TOGGLE ===== -->
 <div class="switch-container">
-  <p>Toggle between Tactical & Servilliance</p>
+  <p>Toggle between Tactical & Servillance</p>
   <label class="switch">
     <input type="checkbox" id="serviceSwitch">
     <span class="slider"></span>
   </label>
 </div>
 
-<!-- ===== SERVICES GRID ===== -->
 <div class="grid" id="serviceGrid"></div>
 
 <footer>⚡️Powered by BlackLogic Technologies Pty Ltd 💻</footer>
 
 <script>
-    const drawer = document.getElementById('drawer');
+const drawer = document.getElementById('drawer');
 const toggleBtn = document.getElementById('drawerToggle');
 
 toggleBtn.addEventListener('click', () => {
   drawer.classList.toggle('open');
 });
-/* TYPEWRITER HEADER */
+
+// Typewriter header
 const titleText = "Our Services";
 let tIndex = 0;
 const titleEl = document.getElementById("servicesTitle");
 
 function typeTitle() {
   titleEl.textContent = titleText.substring(0, tIndex++);
-  if (tIndex <= titleText.length) {
-    setTimeout(typeTitle, 120);
-  }
+  if (tIndex <= titleText.length) setTimeout(typeTitle, 120);
 }
 typeTitle();
 
-/* SERVICE DATA */
+// Services data
 const tactical = [
   {icon:"fa-shield-alt", title:"Armed Response", desc:"Authorized armed response with rapid deployment."},
   {icon:"fa-train", title:"Railway Protection", desc:"Protection of railway assets and passengers."},
@@ -332,11 +344,11 @@ const tactical = [
   {icon:"fa-user-shield", title:"Event Security", desc:"Professional crowd and event control."}
 ];
 
-const servilliance = [
+const servillance = [
   {icon:"fa-user-tie", title:"VIP Escort", desc:"Close protection for high-profile individuals."},
   {icon:"fa-dog", title:"Dog Handling", desc:"Highly trained K9 security units."},
   {icon:"fa-train", title:"Railway Protection", desc:"Railway surveillance and monitoring."},
-  {icon:"fa-drone", title:"Drone Servilliance", desc:"Aerial security surveillance systems."},
+  {icon:"fa-drone", title:"Drone Servillance", desc:"Aerial security surveillance systems."},
   {icon:"fa-video", title:"CCTV Installation", desc:"Professional CCTV setup and monitoring."}
 ];
 
@@ -366,11 +378,9 @@ function renderServices(list) {
 
 renderServices(tactical);
 
-/* TOGGLE */
 document.getElementById("serviceSwitch").addEventListener("change", e => {
-  renderServices(e.target.checked ? servilliance : tactical);
+  renderServices(e.target.checked ? servillance : tactical);
 });
 </script>
-
 </body>
 </html>
