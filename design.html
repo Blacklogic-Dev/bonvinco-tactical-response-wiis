@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlackLogic Design Studio – Canva</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .typewriter h1 {
+      overflow: hidden;
+      border-right: .15em solid #ff69b4;
+      white-space: nowrap;
+      animation: typing 2.5s steps(40, end), blink .75s step-end infinite;
+      font-family: monospace;
+      color: #ff69b4;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-gray-400 to-black min-h-screen text-white">
+
+  <!-- HEADER -->
+  <div class="typewriter text-center mt-8">
+    <h1 class="text-2xl md:text-3xl">Welcome to Design Studio</h1>
+  </div>
+  <p class="text-center text-gray-200 font-mono mt-3 mb-12">
+    Explore Canva and start creating your logo designs
+  </p>
+
+  <!-- DESIGN STUDIO GRID -->
+  <div class="max-w-4xl mx-auto px-6 grid grid-cols-1 gap-10">
+
+    <!-- CANVA DESIGN STUDIO -->
+    <div class="bg-gray-900 rounded-xl shadow-2xl overflow-hidden border border-pink-500">
+      <img src="canva.jpg" alt="Canva Logo" class="w-40 h-40 mx-auto mt-6 object-contain" />
+      <div class="p-6 text-center">
+        <h2 class="text-pink-400 font-mono font-bold text-xl">Canva Design Studio</h2>
+        <p class="text-sm text-gray-400 mt-1">Canva Online • Latest Version</p>
+        <p class="text-gray-300 mt-4 text-left">
+          Canva is a powerful, web-based design platform perfect for logo creation, presentations, social media graphics, and more. Its drag-and-drop interface allows designers of all levels to quickly prototype, customize, and publish creative works. Learn design principles while building real visual projects.
+        </p>
+        <button onclick="window.location.href='https://www.canva.com/'" 
+                class="inline-block mt-6 bg-pink-400 text-black font-bold py-2 px-6 rounded hover:bg-pink-300 transition">
+          Open Canva
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER NOTE -->
+  <p class="text-center text-gray-500 text-sm mt-16 mb-6 font-mono">
+    BlackLogic Technologies • Design Studio Environment
+  </p>
+
+  <script>
+    const user = sessionStorage.getItem("loggedInUser") || "KX0011";
+    document.querySelector(".typewriter h1").textContent = `Welcome ${user} to Design Studio`;
+  </script>
+
+</body>
+</html>

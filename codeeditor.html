@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlackLogic Software Studio – Code Studio</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .typewriter h1 {
+      overflow: hidden;
+      border-right: .15em solid #00ffff;
+      white-space: nowrap;
+      animation: typing 2.5s steps(40, end), blink .75s step-end infinite;
+      font-family: monospace;
+      color: #00ffff;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-gray-400 to-black min-h-screen text-white">
+
+  <!-- HEADER -->
+  <div class="typewriter text-center mt-8">
+    <h1 class="text-2xl md:text-3xl">Code Studio</h1>
+  </div>
+  <p class="text-center text-gray-200 font-mono mt-3 mb-12">
+    
+  </p>
+
+  <!-- CODE EDITORS GRID -->
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+
+
+    <!-- VISUAL STUDIO CODE -->
+    <div class="bg-gray-900 rounded-xl shadow-2xl overflow-hidden border border-blue-500">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code Logo" class="w-24 h-24 mx-auto mt-6 object-contain" />
+      <div class="p-6 text-center">
+        <h2 class="text-blue-400 font-mono font-bold text-xl">Visual Studio Code</h2>
+        <p class="text-sm text-gray-400 mt-1">VS Code Online • Latest Version</p>
+        <p class="text-gray-300 mt-4 text-left">
+          VS Code is a lightweight but powerful source code editor. It supports HTML, CSS, JavaScript, Python, and almost every programming language through extensions. Developers use it for debugging, version control, and building professional applications efficiently.
+        </p>
+        <a href="https://vscode.dev/" target="_blank"
+           class="inline-block mt-6 bg-blue-500 text-black font-bold py-2 px-6 rounded hover:bg-blue-400 transition">
+          Open VS Code
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER NOTE -->
+  <p class="text-center text-gray-500 text-sm mt-16 mb-6 font-mono">
+    BlackLogic Technologies • Code Studio Environment
+  </p>
+
+  <script>
+    const user = sessionStorage.getItem("loggedInUser") || "KX0011";
+    document.querySelector(".typewriter h1").textContent = `Welcome ${user} Code Studio`;
+  </script>
+
+</body>
+</html>
