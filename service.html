@@ -268,8 +268,234 @@ footer {
     <div class="slide" style="background-image:url('task10.jpg')"></div>
   </div>
   <div class="header-overlay"></div>
+  <a href="gallery.html" class="explore-gallery-btn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: gold; color: black; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; z-index: 3;"><i class="fas fa-images"></i> Explore Gallery</a>
 </header>
+<!-- BONVI CHATBOT -->
+<style>
+#bonvi-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#FFD700;
+  color:black;
+  border:none;
+  border-radius:50%;
+  width:60px;
+  height:60px;
+  font-size:20px;
+  cursor:pointer;
+  box-shadow:0 0 15px #FFD700;
+}
 
+/* CHAT BOX */
+#bonvi-chat{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  width:320px;
+  background:#0A0A0F;
+  border-radius:15px;
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  box-shadow:0 0 20px #FFD700;
+}
+
+/* HEADER */
+.chat-header{
+  background:#FFD700;
+  color:black;
+  padding:10px;
+  font-weight:bold;
+}
+
+/* MESSAGES */
+.chat-body{
+  padding:10px;
+  height:300px;
+  overflow-y:auto;
+}
+
+/* BUBBLES */
+.bot{
+  background:white;
+  color:black;
+  padding:8px;
+  border-radius:10px;
+  margin:5px 0;
+}
+
+.user{
+  background:#FFD700;
+  color:black;
+  padding:8px;
+  border-radius:10px;
+  margin:5px 0;
+  text-align:right;
+}
+
+/* SUGGESTIONS */
+.suggestions{
+  padding:10px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+}
+
+.suggestions button{
+  background:#FFD700;
+  border:none;
+  padding:5px 10px;
+  border-radius:10px;
+  cursor:pointer;
+}
+</style>
+
+<button id="bonvi-btn">💬</button>
+
+<div id="bonvi-chat">
+  <div class="chat-header">✨ Bonvi Assistant</div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="suggestions" id="suggestions">
+    <button onclick="send('location')">Location</button>
+    <button onclick="send('services')">Services</button>
+    <button onclick="send('contact')">Contact</button>
+    <button onclick="send('faq')">FAQ</button>
+  </div>
+</div>
+
+<script>
+const chat = document.getElementById("bonvi-chat");
+const body = document.getElementById("chatBody");
+const suggestions = document.getElementById("suggestions");
+
+document.getElementById("bonvi-btn").onclick = ()=>{
+  chat.style.display = chat.style.display === "flex" ? "none" : "flex";
+  chat.style.flexDirection = "column";
+};
+
+// GREETING
+function greet(){
+  addBot(`Hi 👋 I'm Bonvi, your friendly assistant!<br><br>
+  I can help you with our location, services, or connecting you with our admin team.<br><br>
+  What would you like to know today?`);
+}
+greet();
+
+// SEND FUNCTION
+function send(type){
+  addUser(type);
+
+if(type === "location"){
+  addBot(`Sure! Here's our location 📍:<br>
+  9 Corridor Crest, Ben Fleur, eMalahleni 1049<br><br>
+  <img src="map.jpg" alt="Map Location" style="width:100%;border-radius:10px;">`);
+  showSuggestions(["services","contact","faq"]);
+}
+
+ 
+else if(type === "services"){
+  addBot(`Absolutely! Here are our services 🛡:<br><br>
+  
+<b>Armed Response</b><br>
+Authorized armed response with trained personnel to protect your property and personnel quickly and efficiently.<br><br>
+
+<b>Railway Protection</b><br>
+Protection of railway assets and infrastructure to ensure safety, security, and operational continuity.<br><br>
+
+<b>Mobile Patrol</b><br>
+Regular vehicle patrols for rapid area monitoring and deterrence of unauthorized activity.<br><br>
+
+<b>Event Security</b><br>
+Professional crowd and event control to ensure safety and smooth operations during public and private events.<br><br>
+
+<b>VIP Escort</b><br>
+Close protection services for high-profile individuals to guarantee personal safety.<br><br>
+
+<b>Dog Handling (K9)</b><br>
+Highly trained K9 units for security patrols, detection, and threat deterrence.<br><br>
+
+<b>Drone Surveillance</b><br>
+Aerial security surveillance services for enhanced monitoring of large areas or difficult-to-reach locations.<br><br>
+
+<b>CCTV Installation</b><br>
+Professional setup and monitoring of CCTV systems to ensure constant surveillance and safety.`);
+  
+  showSuggestions(["pricing","book","contact","faq"]);
+}
+  else if(type === "contact"){
+    addBot(`Of course! You can contact us 📞:<br><br>
+    📧 vacancies@boninco.com<br>
+    📧 admin@bonvinco.com<br><br>
+    Ermelo – 087 149 4670<br>
+    Witbank – 083 621 7499<br><br>
+    🏢 OFFICE 1, 14 Kerk Street, Ermelo, 2351`);
+    showSuggestions(["location","services","faq"]);
+  }
+
+  else if(type === "faq"){
+    addBot(`Here are some frequently asked questions 🤔:<br><br>
+    1️⃣ What are your operating hours?<br>
+    2️⃣ How do I book a service?<br>
+    3️⃣ Do you provide emergency support?<br><br>
+    Click a question to see the answer.`);
+    showSuggestions(["hours","book","emergency","contact"]);
+  }
+
+  else if(type === "hours"){
+    addBot(`🕘 We operate 24/7 to ensure your safety!`);
+    showSuggestions(["services","contact","faq"]);
+  }
+
+  else if(type === "book"){
+    addBot(`To book a service, just contact our admin via 📧 admin@bonvinco.com or 📞 087 149 4670. They'll assist you immediately!`);
+    showSuggestions(["services","contact","faq"]);
+  }
+
+  else if(type === "emergency"){
+    addBot(`Yes! We provide emergency response 24/7. 🚨<br>
+    Call our emergency line immediately if needed.`);
+    showSuggestions(["services","contact","faq"]);
+  }
+
+  else if(type === "pricing"){
+    addBot(`Pricing depends on the service. For exact quotes, please contact us via 📧 admin@bonvinco.com.`);
+    showSuggestions(["services","contact","faq"]);
+  }
+}
+
+// SHOW DYNAMIC SUGGESTIONS
+function showSuggestions(options){
+  suggestions.innerHTML = "";
+  const map = {
+    location:"Location",
+    services:"Services",
+    contact:"Contact",
+    faq:"FAQ",
+    hours:"Operating Hours",
+    book:"Book a Service",
+    emergency:"Emergency Support",
+    pricing:"Pricing"
+  };
+
+  options.forEach(opt=>{
+    let btn = document.createElement("button");
+    btn.innerHTML = map[opt];
+    btn.onclick = ()=>send(opt);
+    suggestions.appendChild(btn);
+  });
+}
+
+// MESSAGE FUNCTIONS
+function addBot(text){
+  body.innerHTML += `<div class="bot">${text}</div>`;
+  body.scrollTop = body.scrollHeight;
+}
+
+function addUser(text){
+  body.innerHTML += `<div class="user">${text}</div>`;
+}
+</script>
 <div class="section-title">
   <h1 id="servicesTitle"></h1>
 </div>
