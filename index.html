@@ -6,96 +6,126 @@
 <title>Bonvinco Tactical Response</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
-  /* Full page background */
+  :root {
+    --primary-gold: #FFD700;
+    --accent-orange: #FFA500;
+    --dark-bg: #111;
+    --glass: rgba(255, 255, 255, 0.1);
+  }
+
   body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    overflow: hidden;
-    background: #111;
+    min-height: 100%;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: var(--dark-bg);
     color: white;
   }
 
   .landing {
-    background: url('respect.jpg') no-repeat center center/cover;
+    /* Replace 'respect.jpg' with your actual path */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('respect.jpg') no-repeat center center/cover;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
-  /* Date & Time */
+  /* Date & Time HUD */
   .datetime {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 0.9rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+    top: 30px;
+    left: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+    background: var(--glass);
+    padding: 10px 15px;
+    border-left: 3px solid var(--primary-gold);
+    backdrop-filter: blur(5px);
   }
-  .datetime i { margin-right: 6px; color: gold; }
+  .datetime i { margin-right: 8px; color: var(--primary-gold); }
 
-  /* Typewriter effect */
-  .typewriter h1, .typewriter h2 {
-    margin: 10px 0;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 0.15em solid black;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px black;
+  /* Typography */
+  .typewriter {
+    max-width: 800px;
+    z-index: 2;
   }
-  .typewriter h1 { font-size: 2.2rem; color: #FFD700; }
-  .typewriter h2 { font-size: 2.8rem; color: #FFD700; }
+  .typewriter h1 { 
+    font-size: clamp(1.5rem, 5vw, 2.2rem); 
+    color: white; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+  }
+  .typewriter h2 { 
+    font-size: clamp(2rem, 8vw, 3.5rem); 
+    color: var(--primary-gold); 
+    margin: 10px 0;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  }
+  .typewriter p {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    color: #ccc;
+    text-transform: uppercase;
+  }
 
   /* Buttons */
-  .buttons {
+  .discover-btn {
     margin-top: 30px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  .discover-btn, .toggle-btn {
-    padding: 12px 20px;
-    font-size: 1rem;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
     border: none;
-    border-radius: 25px;
-    background: linear-gradient(to right, #FFD700, #FFA500);
+    border-radius: 4px; /* Squarer for tactical look */
+    background: linear-gradient(45deg, var(--primary-gold), var(--accent-orange));
     color: black;
     display: flex;
     align-items: center;
-    gap: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    gap: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
   }
-  .discover-btn:hover, .toggle-btn:hover { transform: scale(1.05); }
+  .discover-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+  }
 
-  /* Toggle Switch */
+  /* Division Switcher Panel */
   .switch-container {
+    margin-top: 50px;
+    padding: 20px;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
   }
-  .switch-label { margin-bottom: 6px; text-align: center; }
+  .switch-label h3 { margin: 0; font-size: 1rem; color: var(--primary-gold); }
+  .switch-label p { margin: 5px 0 15px 0; font-size: 0.8rem; opacity: 0.8; }
+
   .switch {
     position: relative;
     display: inline-block;
     width: 60px;
-    height: 34px;
+    height: 30px;
   }
   .switch input { display:none; }
   .slider {
     position: absolute;
     cursor: pointer;
-    background-color: #ccc;
+    background-color: #333;
     border-radius: 34px;
     top:0; left:0; right:0; bottom:0;
     transition: .4s;
@@ -103,56 +133,55 @@
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px; width: 26px;
+    height: 22px; width: 22px;
     left: 4px; bottom: 4px;
     background-color: white;
     border-radius: 50%;
     transition: .4s;
   }
-  input:checked + .slider {
-    background-color: #FFD700;
-  }
-  input:checked + .slider:before {
-    transform: translateX(26px);
-  }
+  input:checked + .slider { background-color: var(--primary-gold); }
+  input:checked + .slider:before { transform: translateX(30px); }
 
   /* Footer */
   footer {
     position: absolute;
-    bottom: 10px;
-    font-size: 0.8rem;
-    color: #ccc;
+    bottom: 20px;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1px;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    .datetime { top: 10px; left: 10px; font-size: 0.7rem; }
+    .landing { justify-content: flex-end; padding-bottom: 80px; }
   }
 </style>
 </head>
 <body>
 
 <div class="landing">
-  <!-- Date & Time -->
   <div class="datetime">
     <div><i class="fas fa-calendar-alt"></i> 2026</div>
-    <div><i class="fas fa-clock"></i> <span id="time">--:--:--</span></div>
+    <div><i class="fas fa-clock"></i> <span id="time">00:00:00</span></div>
   </div>
 
-  <!-- Typewriter -->
   <div class="typewriter">
-    <h1>Welcome To Bovinco</h1>
+    <h1>Welcome To Bonvinco</h1>
     <h2><span id="dynamicText"></span></h2>
     <p>Your Safety. Our Duty.</p>
+    
+    <center>
+      <button class="discover-btn" onclick="goToService()">
+        Discover Mission <i class="fas fa-chevron-right"></i>
+      </button>
+    </center>
   </div>
 
-  <!-- Buttons -->
-  <div class="buttons">
-    <button class="discover-btn" onclick="goToService()">
-      Discover <i class="fas fa-arrow-right"></i>
-    </button>
-  </div>
-
-  <!-- Toggle -->
   <div class="switch-container">
     <div class="switch-label">
-      <h3>Switch Division</h3>
-      <p>Switch to Bonvinco Holdings</p>
+      <h3>Tactical Division</h3>
+      <p>Switch to Corporate Holdings</p>
     </div>
     <label class="switch">
       <input type="checkbox" id="divisionSwitch">
@@ -160,68 +189,53 @@
     </label>
   </div>
 
-  <footer>⚡️Powered by BlackLogic Technologies Pty Ltd 💻</footer>
+  <footer>⚡️ Powered by BlackLogic Technologies 💻</footer>
 </div>
 
 <script>
-  // Real-time clock
+  // Clock Logic
   function updateTime() {
     const now = new Date();
-    const h = String(now.getHours()).padStart(2,'0');
-    const m = String(now.getMinutes()).padStart(2,'0');
-    const s = String(now.getSeconds()).padStart(2,'0');
-    document.getElementById('time').innerText = `${h}:${m}:${s}`;
+    document.getElementById('time').innerText = now.toLocaleTimeString('en-GB');
   }
   setInterval(updateTime, 1000);
   updateTime();
 
-  // Discover button redirect with loading effect
+  // Redirect Logic
   function goToService() {
-    const btnIcon = document.querySelector('.discover-btn i');
-    btnIcon.classList.add('fa-spin');
-    setTimeout(() => { window.location.href = 'service.html'; }, 1200);
+    const btn = document.querySelector('.discover-btn');
+    btn.innerHTML = 'Loading... <i class="fas fa-circle-notch fa-spin"></i>';
+    setTimeout(() => { window.location.href = 'service.html'; }, 1000);
   }
 
-  // Toggle division
-  const divisionSwitch = document.getElementById('divisionSwitch');
-  if (divisionSwitch) {
-    divisionSwitch.addEventListener('change', () => {
-      if (divisionSwitch.checked) {
-        // Redirect to Bonvinco Holdings when switched on
-        window.location.href = 'http://www.bovincoholdings.com/'
-      } else {
-        // Optionally handle switch-off (no redirect)
-      }
-    });
-  }
+  // Switch Logic
+  document.getElementById('divisionSwitch').addEventListener('change', (e) => {
+    if (e.target.checked) {
+      setTimeout(() => {
+        window.location.href = 'http://www.bovincoholdings.com/';
+      }, 500);
+    }
+  });
 
-  // Typewriter effect with erase
+  // Typewriter Logic
   const text = "Tactical Response";
   let index = 0;
   let isDeleting = false;
-  const speed = 150;
-  const delay = 1000;
   const dynamicText = document.getElementById('dynamicText');
 
   function typeWriter() {
-    if(!isDeleting) {
-      dynamicText.innerText = text.substring(0, index + 1);
-      index++;
-      if(index === text.length){
-        isDeleting = true;
-        setTimeout(typeWriter, delay);
-        return;
-      }
-    } else {
-      dynamicText.innerText = text.substring(0, index - 1);
-      index--;
-      if(index === 0){
-        isDeleting = false;
-        setTimeout(typeWriter, speed);
-        return;
-      }
+    const current = isDeleting ? text.substring(0, index--) : text.substring(0, index++);
+    dynamicText.innerText = current;
+
+    let typeSpeed = isDeleting ? 100 : 200;
+    if (!isDeleting && index === text.length + 1) {
+      typeSpeed = 2000; // Wait at end
+      isDeleting = true;
+    } else if (isDeleting && index === 0) {
+      isDeleting = false;
+      typeSpeed = 500;
     }
-    setTimeout(typeWriter, speed);
+    setTimeout(typeWriter, typeSpeed);
   }
   typeWriter();
 </script>
