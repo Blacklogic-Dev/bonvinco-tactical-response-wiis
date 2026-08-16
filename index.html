@@ -1,244 +1,882 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bonvinco Tactical Response</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<style>
-  :root {
-    --primary-gold: #FFD700;
-    --accent-orange: #FFA500;
-    --dark-bg: #111;
-    --glass: rgba(255, 255, 255, 0.1);
-  }
+  <meta charset="UTF-8">
 
-  body, html {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background: var(--dark-bg);
-    color: white;
-  }
+  <!-- Core responsive configuration -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  .landing {
-    /* Replace 'respect.jpg' with your actual path */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('respect.jpg') no-repeat center center/cover;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    padding: 20px;
-    box-sizing: border-box;
-  }
+  <!-- SEO -->
+  <title>Bonvinco Tactical Response | Professional Security & Tactical Response</title>
 
-  /* Date & Time HUD */
-  .datetime {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 1px;
-    background: var(--glass);
-    padding: 10px 15px;
-    border-left: 3px solid var(--primary-gold);
-    backdrop-filter: blur(5px);
-  }
-  .datetime i { margin-right: 8px; color: var(--primary-gold); }
+  <meta
+    name="description"
+    content="Bonvinco Tactical Response provides professional security, tactical response and protection solutions designed to safeguard people, property and operations."
+  >
 
-  /* Typography */
-  .typewriter {
-    max-width: 800px;
-    z-index: 2;
-  }
-  .typewriter h1 { 
-    font-size: clamp(1.5rem, 5vw, 2.2rem); 
-    color: white; 
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 0;
-  }
-  .typewriter h2 { 
-    font-size: clamp(2rem, 8vw, 3.5rem); 
-    color: var(--primary-gold); 
-    margin: 10px 0;
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
-  }
-  .typewriter p {
-    font-size: 1.2rem;
-    letter-spacing: 4px;
-    color: #ccc;
-    text-transform: uppercase;
-  }
+  <meta
+    name="keywords"
+    content="Bonvinco Tactical Response, tactical response, security services, security company South Africa, professional security, protection services, tactical security"
+  >
 
-  /* Buttons */
-  .discover-btn {
-    margin-top: 30px;
-    padding: 15px 40px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px; /* Squarer for tactical look */
-    background: linear-gradient(45deg, var(--primary-gold), var(--accent-orange));
-    color: black;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-  }
-  .discover-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
-  }
+  <meta name="author" content="Bonvinco Tactical Response">
 
-  /* Division Switcher Panel */
-  .switch-container {
-    margin-top: 50px;
-    padding: 20px;
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    border: 1px solid rgba(255,255,255,0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .switch-label h3 { margin: 0; font-size: 1rem; color: var(--primary-gold); }
-  .switch-label p { margin: 5px 0 15px 0; font-size: 0.8rem; opacity: 0.8; }
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  >
 
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-  }
-  .switch input { display:none; }
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    background-color: #333;
-    border-radius: 34px;
-    top:0; left:0; right:0; bottom:0;
-    transition: .4s;
-  }
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 22px; width: 22px;
-    left: 4px; bottom: 4px;
-    background-color: white;
-    border-radius: 50%;
-    transition: .4s;
-  }
-  input:checked + .slider { background-color: var(--primary-gold); }
-  input:checked + .slider:before { transform: translateX(30px); }
+  <meta name="theme-color" content="#111111">
 
-  /* Footer */
-  footer {
-    position: absolute;
-    bottom: 20px;
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 1px;
-  }
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://bonvinco.com/">
 
-  /* Responsive tweaks */
-  @media (max-width: 600px) {
-    .datetime { top: 10px; left: 10px; font-size: 0.7rem; }
-    .landing { justify-content: flex-end; padding-bottom: 80px; }
+  <!-- Performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <link
+    rel="preload"
+    as="image"
+    href="respect.jpg"
+  >
+
+  <!-- Open Graph / Social SEO -->
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:title"
+    content="Bonvinco Tactical Response | Professional Security & Tactical Response"
+  >
+
+  <meta
+    property="og:description"
+    content="Professional security, tactical response and protection solutions from Bonvinco Tactical Response."
+  >
+
+  <meta property="og:url" content="https://bonvinco.com/">
+
+  <meta
+    property="og:image"
+    content="https://bonvinco.com/respect.jpg"
+  >
+
+  <meta property="og:image:alt" content="Bonvinco Tactical Response">
+
+  <meta property="og:site_name" content="Bonvinco Tactical Response">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta
+    name="twitter:title"
+    content="Bonvinco Tactical Response | Professional Security & Tactical Response"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Professional security, tactical response and protection solutions."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://bonvinco.com/respect.jpg"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Bonvinco Tactical Response",
+    "url": "https://bonvinco.com/",
+    "description": "Bonvinco Tactical Response provides professional security, tactical response and protection solutions designed to safeguard people, property and operations.",
+    "logo": "https://bonvinco.com/respect.jpg",
+    "brand": {
+      "@type": "Brand",
+      "name": "Bonvinco Tactical Response"
+    },
+    "sameAs": [
+      "https://bonvinco.com/",
+      "https://bovincoholdings.com/"
+    ]
   }
-</style>
+  </script>
+
+  <style>
+    :root {
+      --primary-gold: #FFD700;
+      --accent-orange: #FFA500;
+      --dark-bg: #111;
+      --glass: rgba(255, 255, 255, 0.1);
+      --text-light: #ffffff;
+      --text-muted: #ccc;
+      --focus-ring: rgba(255, 215, 0, 0.65);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-light);
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    /* =========================================================
+       MAIN LANDING EXPERIENCE
+       Existing Bonvinco visual design preserved
+    ========================================================= */
+
+    .landing {
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.6),
+          rgba(0,0,0,0.6)
+        ),
+        url('respect.jpg') no-repeat center center / cover;
+
+      width: 100%;
+      min-height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+      position: relative;
+
+      padding: 20px;
+    }
+
+    /* =========================================================
+       DATE & TIME HUD
+    ========================================================= */
+
+    .datetime {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: 1px;
+
+      background: var(--glass);
+      padding: 10px 15px;
+
+      border-left: 3px solid var(--primary-gold);
+
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+
+      z-index: 5;
+    }
+
+    .datetime i {
+      margin-right: 8px;
+      color: var(--primary-gold);
+    }
+
+    /* =========================================================
+       TYPOGRAPHY
+    ========================================================= */
+
+    .typewriter {
+      max-width: 800px;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .typewriter h1 {
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+
+      color: white;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      margin: 0;
+      margin-bottom: 0;
+    }
+
+    .typewriter h2 {
+      font-size: clamp(2rem, 8vw, 3.5rem);
+
+      color: var(--primary-gold);
+
+      margin: 10px 0;
+
+      text-shadow:
+        0 0 15px rgba(255, 215, 0, 0.4);
+
+      min-height: 1.25em;
+    }
+
+    .typewriter p {
+      font-size: 1.2rem;
+
+      letter-spacing: 4px;
+
+      color: var(--text-muted);
+
+      text-transform: uppercase;
+
+      margin: 0;
+    }
+
+    /* SEO-supporting semantic description.
+       Kept visually subtle so the original design remains unchanged. */
+    .seo-context {
+      max-width: 700px;
+
+      margin: 14px auto 0;
+
+      font-size: 0.88rem;
+      line-height: 1.6;
+
+      color: rgba(255,255,255,0.72);
+    }
+
+    /* =========================================================
+       BUTTON
+    ========================================================= */
+
+    .discover-btn {
+      margin-top: 30px;
+
+      padding: 15px 40px;
+
+      font-size: 1.1rem;
+      font-weight: bold;
+
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      border: none;
+      border-radius: 4px;
+
+      background:
+        linear-gradient(
+          45deg,
+          var(--primary-gold),
+          var(--accent-orange)
+        );
+
+      color: black;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 15px;
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
+
+      box-shadow:
+        0 0 20px rgba(255, 215, 0, 0.2);
+
+      min-width: 230px;
+    }
+
+    .discover-btn:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 10px 25px rgba(255, 215, 0, 0.4);
+    }
+
+    .discover-btn:focus-visible {
+      outline: 3px solid var(--focus-ring);
+      outline-offset: 4px;
+    }
+
+    .discover-btn:disabled {
+      cursor: wait;
+      opacity: 0.8;
+    }
+
+    /* =========================================================
+       DIVISION SWITCHER PANEL
+    ========================================================= */
+
+    .switch-container {
+      margin-top: 50px;
+
+      padding: 20px;
+
+      background: var(--glass);
+
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+
+      border-radius: 15px;
+
+      border: 1px solid rgba(255,255,255,0.1);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      z-index: 2;
+    }
+
+    .switch-label h3 {
+      margin: 0;
+
+      font-size: 1rem;
+
+      color: var(--primary-gold);
+    }
+
+    .switch-label p {
+      margin: 5px 0 15px 0;
+
+      font-size: 0.8rem;
+
+      opacity: 0.8;
+    }
+
+    /* =========================================================
+       ACCESSIBLE SWITCH
+    ========================================================= */
+
+    .switch {
+      position: relative;
+
+      display: inline-block;
+
+      width: 60px;
+      height: 30px;
+    }
+
+    /*
+      Visually hide checkbox without removing keyboard accessibility.
+    */
+    .switch input {
+      position: absolute;
+
+      opacity: 0;
+
+      width: 1px;
+      height: 1px;
+    }
+
+    .slider {
+      position: absolute;
+
+      cursor: pointer;
+
+      background-color: #333;
+
+      border-radius: 34px;
+
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      transition: 0.4s;
+    }
+
+    .slider:before {
+      position: absolute;
+
+      content: "";
+
+      height: 22px;
+      width: 22px;
+
+      left: 4px;
+      bottom: 4px;
+
+      background-color: white;
+
+      border-radius: 50%;
+
+      transition: 0.4s;
+    }
+
+    input:checked + .slider {
+      background-color: var(--primary-gold);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(30px);
+    }
+
+    input:focus-visible + .slider {
+      outline: 3px solid var(--focus-ring);
+      outline-offset: 4px;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      position: absolute;
+
+      bottom: 20px;
+
+      font-size: 0.75rem;
+
+      color: rgba(255,255,255,0.5);
+
+      letter-spacing: 1px;
+
+      z-index: 2;
+    }
+
+    /* =========================================================
+       NO JAVASCRIPT FALLBACK
+    ========================================================= */
+
+    .noscript-message {
+      background: #111;
+      color: white;
+
+      padding: 15px;
+
+      text-align: center;
+
+      font-size: 0.9rem;
+    }
+
+    .noscript-message a {
+      color: var(--primary-gold);
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 600px) {
+
+      .datetime {
+        top: 10px;
+        left: 10px;
+
+        font-size: 0.7rem;
+      }
+
+      .landing {
+        justify-content: flex-end;
+
+        padding:
+          80px 20px 80px;
+      }
+
+      .typewriter h1 {
+        letter-spacing: 1px;
+      }
+
+      .typewriter p {
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+      }
+
+      .seo-context {
+        font-size: 0.78rem;
+        max-width: 95%;
+      }
+
+      .discover-btn {
+        width: min(100%, 300px);
+      }
+
+      .switch-container {
+        margin-top: 35px;
+      }
+
+      footer {
+        bottom: 10px;
+
+        font-size: 0.65rem;
+      }
+    }
+
+    /* =========================================================
+       ACCESSIBILITY — REDUCED MOTION
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="landing">
-  <div class="datetime">
-    <div><i class="fas fa-calendar-alt"></i> 2026</div>
-    <div><i class="fas fa-clock"></i> <span id="time">00:00:00</span></div>
-  </div>
+  <main
+    class="landing"
+    role="main"
+    aria-label="Bonvinco Tactical Response"
+  >
 
-  <div class="typewriter">
-    <h1>Welcome To Bonvinco</h1>
-    <h2><span id="dynamicText"></span></h2>
-    <p>Your Safety. Our Duty.</p>
-    
-    <center>
-      <button class="discover-btn" onclick="goToService()">
-        Discover Mission <i class="fas fa-chevron-right"></i>
+    <!-- =====================================================
+         DATE & TIME HUD
+    ====================================================== -->
+
+    <aside
+      class="datetime"
+      aria-label="Current date and time"
+    >
+      <div>
+        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+        <span>2026</span>
+      </div>
+
+      <div>
+        <i class="fas fa-clock" aria-hidden="true"></i>
+        <time id="time" aria-live="off">00:00:00</time>
+      </div>
+    </aside>
+
+
+    <!-- =====================================================
+         HERO CONTENT
+    ====================================================== -->
+
+    <section
+      class="typewriter"
+      aria-labelledby="hero-title"
+    >
+
+      <h1 id="hero-title">
+        Welcome To Bonvinco
+      </h1>
+
+      <h2>
+        <span
+          id="dynamicText"
+          aria-label="Tactical Response"
+        ></span>
+      </h2>
+
+      <p>
+        Your Safety. Our Duty.
+      </p>
+
+      <!-- SEO / contextual content -->
+      <p class="seo-context">
+        Bonvinco Tactical Response provides professional security,
+        tactical response and protection solutions designed to safeguard
+        people, property and operations.
+      </p>
+
+      <button
+        class="discover-btn"
+        id="discoverButton"
+        type="button"
+        aria-label="Discover Bonvinco Tactical Response services"
+        onclick="goToService()"
+      >
+        <span id="buttonText">
+          Discover Mission
+        </span>
+
+        <i
+          class="fas fa-chevron-right"
+          aria-hidden="true"
+        ></i>
       </button>
-    </center>
-  </div>
 
-  <div class="switch-container">
-    <div class="switch-label">
-      <h3>Tactical Division</h3>
-      <p>Switch to Corporate Holdings</p>
-    </div>
-    <label class="switch">
-      <input type="checkbox" id="divisionSwitch">
-      <span class="slider"></span>
-    </label>
-  </div>
+    </section>
 
-  <footer>⚡️ Powered by BlackLogic Technologies 💻</footer>
-</div>
 
-<script>
-  // Clock Logic
-  function updateTime() {
-    const now = new Date();
-    document.getElementById('time').innerText = now.toLocaleTimeString('en-GB');
-  }
-  setInterval(updateTime, 1000);
-  updateTime();
+    <!-- =====================================================
+         DIVISION SWITCHER
+    ====================================================== -->
 
-  // Redirect Logic
-  function goToService() {
-    const btn = document.querySelector('.discover-btn');
-    btn.innerHTML = 'Loading... <i class="fas fa-circle-notch fa-spin"></i>';
-    setTimeout(() => { window.location.href = 'service.html'; }, 1000);
-  }
+    <section
+      class="switch-container"
+      aria-label="Bonvinco corporate divisions"
+    >
 
-  // Switch Logic
-  document.getElementById('divisionSwitch').addEventListener('change', (e) => {
-    if (e.target.checked) {
+      <div class="switch-label">
+
+        <h3>
+          Tactical Division
+        </h3>
+
+        <p>
+          Switch to Corporate Holdings
+        </p>
+
+      </div>
+
+      <label
+        class="switch"
+        for="divisionSwitch"
+        aria-label="Switch to Bovinco Holdings"
+      >
+
+        <input
+          type="checkbox"
+          id="divisionSwitch"
+          aria-label="Switch to Bovinco Holdings"
+        >
+
+        <span
+          class="slider"
+          aria-hidden="true"
+        ></span>
+
+      </label>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+      <span aria-hidden="true">⚡️</span>
+      Powered by BlackLogic Technologies
+      <span aria-hidden="true">💻</span>
+    </footer>
+
+  </main>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+    /*
+     * ========================================================
+     * CLOCK LOGIC
+     * ========================================================
+     */
+
+    function updateTime() {
+
+      const now = new Date();
+
+      const timeElement =
+        document.getElementById('time');
+
+      if (timeElement) {
+
+        timeElement.textContent =
+          now.toLocaleTimeString('en-GB');
+
+      }
+    }
+
+    updateTime();
+
+    setInterval(updateTime, 1000);
+
+
+    /*
+     * ========================================================
+     * SERVICE REDIRECT
+     * ========================================================
+     */
+
+    function goToService() {
+
+      const btn =
+        document.getElementById('discoverButton');
+
+      const buttonText =
+        document.getElementById('buttonText');
+
+      if (!btn || !buttonText) return;
+
+      btn.disabled = true;
+
+      buttonText.textContent = 'Loading...';
+
+      btn.setAttribute(
+        'aria-label',
+        'Loading Bonvinco Tactical Response services'
+      );
+
+      const icon =
+        btn.querySelector('i');
+
+      if (icon) {
+
+        icon.className =
+          'fas fa-circle-notch fa-spin';
+
+      }
+
       setTimeout(() => {
-        window.location.href = 'http://www.bovincoholdings.com/';
-      }, 500);
+
+        window.location.href =
+          'service.html';
+
+      }, 1000);
     }
-  });
 
-  // Typewriter Logic
-  const text = "Tactical Response";
-  let index = 0;
-  let isDeleting = false;
-  const dynamicText = document.getElementById('dynamicText');
 
-  function typeWriter() {
-    const current = isDeleting ? text.substring(0, index--) : text.substring(0, index++);
-    dynamicText.innerText = current;
+    /*
+     * ========================================================
+     * DIVISION SWITCHER
+     * ========================================================
+     */
 
-    let typeSpeed = isDeleting ? 100 : 200;
-    if (!isDeleting && index === text.length + 1) {
-      typeSpeed = 2000; // Wait at end
-      isDeleting = true;
-    } else if (isDeleting && index === 0) {
-      isDeleting = false;
-      typeSpeed = 500;
+    const divisionSwitch =
+      document.getElementById('divisionSwitch');
+
+    if (divisionSwitch) {
+
+      divisionSwitch.addEventListener(
+        'change',
+        function (event) {
+
+          if (event.target.checked) {
+
+            /*
+             * HTTPS is used for secure navigation.
+             */
+
+            setTimeout(() => {
+
+              window.location.href =
+                'https://www.bovincoholdings.com/';
+
+            }, 500);
+
+          }
+
+        }
+      );
+
     }
-    setTimeout(typeWriter, typeSpeed);
-  }
-  typeWriter();
-</script>
+
+
+    /*
+     * ========================================================
+     * TYPEWRITER
+     * ========================================================
+     */
+
+    const text =
+      'Tactical Response';
+
+    let index = 0;
+
+    let isDeleting = false;
+
+    const dynamicText =
+      document.getElementById('dynamicText');
+
+
+    function typeWriter() {
+
+      if (!dynamicText) return;
+
+      const current =
+        isDeleting
+          ? text.substring(0, index--)
+          : text.substring(0, index++);
+
+      dynamicText.textContent =
+        current;
+
+
+      let typeSpeed =
+        isDeleting
+          ? 100
+          : 200;
+
+
+      if (
+        !isDeleting &&
+        index === text.length + 1
+      ) {
+
+        typeSpeed = 2000;
+
+        isDeleting = true;
+
+      }
+
+      else if (
+        isDeleting &&
+        index === 0
+      ) {
+
+        isDeleting = false;
+
+        typeSpeed = 500;
+
+      }
+
+
+      setTimeout(
+        typeWriter,
+        typeSpeed
+      );
+    }
+
+
+    typeWriter();
+
+  </script>
+
+
+  <!-- =======================================================
+       NO JAVASCRIPT FALLBACK
+  ======================================================== -->
+
+  <noscript>
+
+    <div class="noscript-message">
+
+      JavaScript is required for the interactive
+      Bonvinco Tactical Response experience.
+
+      <br>
+
+      <a href="service.html">
+        Continue to Bonvinco Services
+      </a>
+
+    </div>
+
+  </noscript>
 
 </body>
 </html>

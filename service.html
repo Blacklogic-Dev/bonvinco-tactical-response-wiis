@@ -1,636 +1,2687 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bonvinco Tactical Response | Services</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
 
-<style>
-:root {
-  --gold: #FFD700;
-  --dark-bg: #000;
-  --card-bg: #111;
-  --glass: rgba(255, 255, 255, 0.1);
-}
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-  background: var(--dark-bg);
-  color: #fff;
-  overflow-x: hidden;
-}
+  <!-- =====================================================
+       SEO
+  ====================================================== -->
 
-/* ================= HEADER SLIDER ================= */
-header {
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-}
+  <title>
+    Security Services | Bonvinco Tactical Response South Africa
+  </title>
 
-.header-slider {
-  display: flex;
-  width: 1000%;
-  height: 100%;
-  animation: slideImages 40s infinite ease-in-out;
-}
+  <meta
+    name="description"
+    content="Explore Bonvinco Tactical Response security services including armed response, railway protection, mobile patrols, event security, VIP escort, K9 handling, drone surveillance and CCTV monitoring."
+  >
 
-.slide {
-  flex: 0 0 10%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
+  <meta
+    name="keywords"
+    content="Bonvinco Tactical Response, security services South Africa, armed response, railway protection, mobile patrol, event security, VIP escort, K9 security, drone surveillance, CCTV monitoring"
+  >
 
-.header-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
-  z-index: 2;
-}
+  <meta
+    name="author"
+    content="Bonvinco Tactical Response"
+  >
 
-@keyframes slideImages {
-  0%, 10% { transform: translateX(0%); }
-  11%, 20% { transform: translateX(-10%); }
-  21%, 30% { transform: translateX(-20%); }
-  31%, 40% { transform: translateX(-30%); }
-  41%, 50% { transform: translateX(-40%); }
-  51%, 60% { transform: translateX(-50%); }
-  61%, 70% { transform: translateX(-60%); }
-  71%, 80% { transform: translateX(-70%); }
-  81%, 90% { transform: translateX(-80%); }
-  91%, 100% { transform: translateX(-90%); }
-}
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  >
 
-/* ================= SECTION TITLE ================= */
-.section-title {
-  text-align: center;
-  margin: 40px 0 20px;
-}
+  <meta
+    name="theme-color"
+    content="#000000"
+  >
 
-.section-title h1 {
-  font-size: 3rem;
-  color: var(--gold);
-  border-right: 0.15em solid var(--gold);
-  width: fit-content;
-  margin: auto;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
+  <link
+    rel="canonical"
+    href="https://bonvinco.com/service.html"
+  >
 
-/* ================= TOGGLE SWITCH ================= */
-.switch-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px 0 40px;
-}
+  <!-- =====================================================
+       OPEN GRAPH
+  ====================================================== -->
 
-.switch-container p {
-  margin-bottom: 15px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #ccc;
-}
+  <meta
+    property="og:type"
+    content="website"
+  >
 
-.switch {
-  position: relative;
-  width: 60px;
-  height: 34px;
-}
+  <meta
+    property="og:title"
+    content="Security Services | Bonvinco Tactical Response"
+  >
 
-.switch input { display: none; }
+  <meta
+    property="og:description"
+    content="Professional tactical response, security and protection services from Bonvinco Tactical Response."
+  >
 
-.slider {
-  position: absolute;
-  inset: 0;
-  background: #333;
-  border-radius: 34px;
-  cursor: pointer;
-  transition: 0.4s;
-}
+  <meta
+    property="og:url"
+    content="https://bonvinco.com/service.html"
+  >
 
-.slider:before {
-  content: "";
-  position: absolute;
-  width: 26px; height: 26px;
-  left: 4px; bottom: 4px;
-  background: #fff;
-  border-radius: 50%;
-  transition: 0.4s;
-}
+  <meta
+    property="og:site_name"
+    content="Bonvinco Tactical Response"
+  >
 
-input:checked + .slider { background: var(--gold); }
-input:checked + .slider:before { transform: translateX(26px); }
+  <meta
+    property="og:image"
+    content="https://bonvinco.com/task1.jpg"
+  >
 
-/* ================= SERVICES GRID (FLIP CARDS) ================= */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px 50px;
-}
+  <meta
+    property="og:image:alt"
+    content="Bonvinco Tactical Response security operations"
+  >
 
-.service {
-  width: 220px;
-  height: 250px;
-  perspective: 1000px;
-  cursor: pointer;
-  animation: fadeInUp 0.6s ease forwards;
-}
+  <!-- =====================================================
+       TWITTER / X
+  ====================================================== -->
 
-.service-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-style: preserve-3d;
-}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
 
-.service:hover .service-inner { transform: rotateY(180deg); }
+  <meta
+    name="twitter:title"
+    content="Security Services | Bonvinco Tactical Response"
+  >
 
-.service-front, .service-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-  border: 1px solid rgba(255,215,0,0.2);
-}
+  <meta
+    name="twitter:description"
+    content="Professional tactical response, security and protection services from Bonvinco Tactical Response."
+  >
 
-.service-front {
-  background: var(--card-bg);
-}
+  <meta
+    name="twitter:image"
+    content="https://bonvinco.com/task1.jpg"
+  >
 
-.service-front i {
-  font-size: 3rem;
-  color: var(--gold);
-  margin-bottom: 15px;
-}
+  <!-- =====================================================
+       PERFORMANCE
+  ====================================================== -->
 
-.service-back {
-  background: var(--gold);
-  color: #000;
-  transform: rotateY(180deg);
-}
+  <link
+    rel="preconnect"
+    href="https://cdnjs.cloudflare.com"
+    crossorigin
+  >
 
-.service-back p {
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1.4;
-}
+  <link
+    rel="preload"
+    as="image"
+    href="task1.jpg"
+  >
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  <!-- =====================================================
+       FONT AWESOME
+  ====================================================== -->
 
-/* ================= DRAWER (GLASSMORPHISM) ================= */
-.drawer-toggle {
-  position: fixed;
-  top: 20px; right: 20px;
-  z-index: 1000;
-  background: var(--gold);
-  border: none; color: #000;
-  width: 50px; height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
 
-.drawer {
-  position: fixed;
-  top: 0; right: -280px;
-  height: 100%; width: 280px;
-  background: rgba(0,0,0,0.9);
-  backdrop-filter: blur(15px);
-  display: flex;
-  flex-direction: column;
-  padding-top: 80px;
-  z-index: 999;
-  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border-left: 1px solid rgba(255,215,0,0.3);
-}
+  <!-- =====================================================
+       STRUCTURED DATA
+  ====================================================== -->
 
-.drawer.open { right: 0; }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Bonvinco Tactical Response Security Services",
+    "url": "https://bonvinco.com/service.html",
+    "description": "Professional security, tactical response and protection services provided by Bonvinco Tactical Response.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Bonvinco Tactical Response",
+      "url": "https://bonvinco.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Bonvinco Tactical Response",
+      "url": "https://bonvinco.com/"
+    }
+  }
+  </script>
 
-.drawer-item {
-  display: flex;
-  align-items: center;
-  padding: 20px 30px;
-  text-decoration: none;
-  color: var(--gold);
-  font-weight: bold;
-  gap: 20px;
-  transition: background 0.3s;
-}
 
-.drawer-item:hover {
-  background: rgba(255, 215, 0, 0.1);
-  padding-left: 40px;
-}
+  <style>
 
-/* ================= CHATBOT ================= */
-#bonvi-btn {
-  position: fixed;
-  bottom: 25px; right: 25px;
-  background: var(--gold);
-  border: none; border-radius: 50%;
-  width: 65px; height: 65px;
-  font-size: 24px; cursor: pointer;
-  z-index: 1000;
-  animation: pulse-gold 2s infinite;
-}
+    /* =====================================================
+       ROOT
+    ====================================================== */
 
-@keyframes pulse-gold {
-  0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(255, 215, 0, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
-}
+    :root {
 
-#bonvi-chat {
-  position: fixed;
-  bottom: 100px; right: 25px;
-  width: 350px; height: 500px;
-  background: #0A0A0F;
-  border-radius: 20px;
-  display: none;
-  flex-direction: column;
-  border: 1px solid var(--gold);
-  z-index: 1001;
-}
+      --gold: #FFD700;
+      --gold-dark: #d4af00;
 
-.chat-header { background: var(--gold); color: #000; padding: 15px; font-weight: bold; border-radius: 18px 18px 0 0; }
-.chat-body { padding: 15px; flex-grow: 1; overflow-y: auto; }
-.bot { background: #222; color: #fff; padding: 12px; border-radius: 15px 15px 15px 0; margin-bottom: 10px; }
-.user { background: var(--gold); color: #000; padding: 10px; border-radius: 15px 15px 0 15px; margin-left: auto; width: fit-content; margin-bottom: 10px; }
+      --dark-bg: #000;
+      --card-bg: #111;
+      --card-bg-soft: #171717;
 
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  font-size: 0.85rem;
-  color: #666;
-  border-top: 1px solid #222;
-  margin-top: 50px;
-}
-</style>
+      --text-primary: #fff;
+      --text-secondary: #ccc;
+
+      --border:
+        rgba(255, 215, 0, 0.22);
+
+      --glass:
+        rgba(0, 0, 0, 0.72);
+
+      --shadow:
+        0 12px 35px rgba(0,0,0,0.45);
+
+    }
+
+
+    /* =====================================================
+       RESET
+    ====================================================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      margin: 0;
+
+      font-family:
+        'Segoe UI',
+        Roboto,
+        Arial,
+        sans-serif;
+
+      background:
+        var(--dark-bg);
+
+      color:
+        var(--text-primary);
+
+      overflow-x:
+        hidden;
+
+    }
+
+
+    a {
+      color: inherit;
+    }
+
+
+    button,
+    a {
+      -webkit-tap-highlight-color:
+        transparent;
+    }
+
+
+    /* =====================================================
+       HEADER / FADE SLIDER
+    ====================================================== */
+
+    header {
+
+      height:
+        420px;
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      background:
+        #000;
+
+    }
+
+
+    .header-slider {
+
+      position:
+        absolute;
+
+      inset:
+        0;
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+    }
+
+
+    .slide {
+
+      position:
+        absolute;
+
+      inset:
+        0;
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      background-size:
+        cover;
+
+      background-position:
+        center;
+
+      background-repeat:
+        no-repeat;
+
+      opacity:
+        0;
+
+      transition:
+        opacity 1.4s ease-in-out;
+
+      will-change:
+        opacity;
+
+    }
+
+
+    .slide.active {
+      opacity:
+        1;
+    }
+
+
+    .header-overlay {
+
+      position:
+        absolute;
+
+      inset:
+        0;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.25),
+          rgba(0,0,0,0.88)
+        );
+
+      z-index:
+        2;
+
+    }
+
+
+    /* =====================================================
+       HERO CONTENT
+    ====================================================== */
+
+    .hero-content {
+
+      position:
+        absolute;
+
+      inset:
+        0;
+
+      z-index:
+        3;
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      justify-content:
+        center;
+
+      align-items:
+        center;
+
+      text-align:
+        center;
+
+      padding:
+        20px;
+
+    }
+
+
+    .hero-content h1 {
+
+      margin:
+        0 0 12px;
+
+      color:
+        var(--gold);
+
+      font-size:
+        clamp(2rem, 6vw, 4rem);
+
+      line-height:
+        1.05;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        3px;
+
+      text-shadow:
+        0 5px 20px rgba(0,0,0,0.75);
+
+    }
+
+
+    .hero-content p {
+
+      max-width:
+        760px;
+
+      margin:
+        0;
+
+      color:
+        #eee;
+
+      font-size:
+        clamp(0.95rem, 2vw, 1.2rem);
+
+      line-height:
+        1.7;
+
+      text-shadow:
+        0 3px 12px rgba(0,0,0,0.8);
+
+    }
+
+
+    /* =====================================================
+       GALLERY BUTTON
+    ====================================================== */
+
+    .gallery-button {
+
+      margin-top:
+        24px;
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      gap:
+        10px;
+
+      padding:
+        14px 28px;
+
+      background:
+        var(--gold);
+
+      color:
+        #000;
+
+      text-decoration:
+        none;
+
+      border-radius:
+        4px;
+
+      font-weight:
+        800;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        0.8px;
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+    }
+
+
+    .gallery-button:hover {
+
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        0 10px 25px
+        rgba(255,215,0,0.35);
+
+    }
+
+
+    .gallery-button:focus-visible {
+
+      outline:
+        3px solid #fff;
+
+      outline-offset:
+        4px;
+
+    }
+
+
+    /* =====================================================
+       SLIDER INDICATORS
+    ====================================================== */
+
+    .slider-dots {
+
+      position:
+        absolute;
+
+      bottom:
+        20px;
+
+      left:
+        50%;
+
+      transform:
+        translateX(-50%);
+
+      z-index:
+        5;
+
+      display:
+        flex;
+
+      gap:
+        8px;
+
+    }
+
+
+    .slider-dot {
+
+      width:
+        8px;
+
+      height:
+        8px;
+
+      border:
+        none;
+
+      border-radius:
+        50%;
+
+      background:
+        rgba(255,255,255,0.45);
+
+      cursor:
+        pointer;
+
+      padding:
+        0;
+
+      transition:
+        all .3s ease;
+
+    }
+
+
+    .slider-dot.active {
+
+      width:
+        24px;
+
+      border-radius:
+        10px;
+
+      background:
+        var(--gold);
+
+    }
+
+
+    .slider-dot:focus-visible {
+
+      outline:
+        2px solid #fff;
+
+      outline-offset:
+        3px;
+
+    }
+
+
+    /* =====================================================
+       SECTION TITLE
+    ====================================================== */
+
+    .section-title {
+
+      text-align:
+        center;
+
+      margin:
+        55px auto 15px;
+
+      padding:
+        0 20px;
+
+      max-width:
+        1000px;
+
+    }
+
+
+    .section-title h2 {
+
+      margin:
+        0;
+
+      color:
+        var(--gold);
+
+      font-size:
+        clamp(2rem, 5vw, 3rem);
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        3px;
+
+    }
+
+
+    .section-title p {
+
+      max-width:
+        760px;
+
+      margin:
+        15px auto 0;
+
+      color:
+        var(--text-secondary);
+
+      font-size:
+        1rem;
+
+      line-height:
+        1.7;
+
+    }
+
+
+    /* =====================================================
+       SERVICES GRID
+       4 COLUMNS DESKTOP
+    ====================================================== */
+
+    .grid {
+
+      width:
+        min(1400px, 100%);
+
+      margin:
+        0 auto;
+
+      padding:
+        35px 45px 60px;
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+      gap:
+        28px;
+
+    }
+
+
+    /* =====================================================
+       SERVICE CARD
+    ====================================================== */
+
+    .service {
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      min-height:
+        390px;
+
+      background:
+        var(--card-bg);
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        14px;
+
+      box-shadow:
+        var(--shadow);
+
+      transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+      animation:
+        fadeInUp .7s ease both;
+
+    }
+
+
+    .service:hover {
+
+      transform:
+        translateY(-7px);
+
+      border-color:
+        rgba(255,215,0,0.65);
+
+      box-shadow:
+        0 18px 45px
+        rgba(0,0,0,0.65);
+
+    }
+
+
+    /* =====================================================
+       SERVICE IMAGE
+    ====================================================== */
+
+    .service-image {
+
+      width:
+        100%;
+
+      height:
+        190px;
+
+      object-fit:
+        cover;
+
+      display:
+        block;
+
+      transition:
+        transform .5s ease;
+
+    }
+
+
+    .service:hover .service-image {
+
+      transform:
+        scale(1.04);
+
+    }
+
+
+    /* =====================================================
+       IMAGE OVERLAY
+    ====================================================== */
+
+    .service-image-wrap {
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+    }
+
+
+    .service-image-wrap::after {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      inset:
+        0;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,0.65),
+          transparent 70%
+        );
+
+    }
+
+
+    /* =====================================================
+       SERVICE CONTENT
+    ====================================================== */
+
+    .service-content {
+
+      padding:
+        22px;
+
+    }
+
+
+    .service-icon {
+
+      width:
+        46px;
+
+      height:
+        46px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      margin-bottom:
+        14px;
+
+      border:
+        1px solid rgba(255,215,0,0.35);
+
+      background:
+        rgba(255,215,0,0.08);
+
+      border-radius:
+        10px;
+
+      color:
+        var(--gold);
+
+      font-size:
+        1.35rem;
+
+    }
+
+
+    .service h3 {
+
+      margin:
+        0 0 10px;
+
+      font-size:
+        1.2rem;
+
+      color:
+        #fff;
+
+    }
+
+
+    .service p {
+
+      margin:
+        0;
+
+      color:
+        #bbb;
+
+      font-size:
+        .92rem;
+
+      line-height:
+        1.65;
+
+    }
+
+
+    /* =====================================================
+       NAVIGATION DRAWER
+    ====================================================== */
+
+    .drawer-toggle {
+
+      position:
+        fixed;
+
+      top:
+        20px;
+
+      right:
+        20px;
+
+      z-index:
+        1000;
+
+      width:
+        50px;
+
+      height:
+        50px;
+
+      border:
+        none;
+
+      border-radius:
+        50%;
+
+      background:
+        var(--gold);
+
+      color:
+        #000;
+
+      cursor:
+        pointer;
+
+      font-size:
+        1.1rem;
+
+      box-shadow:
+        0 4px 15px rgba(0,0,0,0.5);
+
+    }
+
+
+    .drawer-toggle:focus-visible {
+
+      outline:
+        3px solid #fff;
+
+      outline-offset:
+        4px;
+
+    }
+
+
+    .drawer {
+
+      position:
+        fixed;
+
+      top:
+        0;
+
+      right:
+        -300px;
+
+      width:
+        280px;
+
+      height:
+        100%;
+
+      padding-top:
+        80px;
+
+      background:
+        rgba(0,0,0,0.94);
+
+      backdrop-filter:
+        blur(15px);
+
+      -webkit-backdrop-filter:
+        blur(15px);
+
+      border-left:
+        1px solid rgba(255,215,0,0.3);
+
+      z-index:
+        999;
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      transition:
+        right .4s cubic-bezier(.4,0,.2,1);
+
+    }
+
+
+    .drawer.open {
+      right:
+        0;
+    }
+
+
+    .drawer-item {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        20px;
+
+      padding:
+        20px 30px;
+
+      color:
+        var(--gold);
+
+      text-decoration:
+        none;
+
+      font-weight:
+        700;
+
+      transition:
+        background .25s ease,
+        padding-left .25s ease;
+
+    }
+
+
+    .drawer-item:hover {
+
+      background:
+        rgba(255,215,0,0.1);
+
+      padding-left:
+        40px;
+
+    }
+
+
+    .drawer-item:focus-visible {
+
+      outline:
+        2px solid var(--gold);
+
+      outline-offset:
+        -2px;
+
+    }
+
+
+    /* =====================================================
+       CHATBOT
+    ====================================================== */
+
+    #bonvi-btn {
+
+      position:
+        fixed;
+
+      bottom:
+        20px;
+
+      right:
+        20px;
+
+      z-index:
+        1000;
+
+      width:
+        60px;
+
+      height:
+        60px;
+
+      border:
+        none;
+
+      border-radius:
+        50%;
+
+      background:
+        var(--gold);
+
+      color:
+        #000;
+
+      font-size:
+        20px;
+
+      cursor:
+        pointer;
+
+      box-shadow:
+        0 0 15px rgba(255,215,0,.55);
+
+    }
+
+
+    #bonvi-btn:focus-visible {
+
+      outline:
+        3px solid #fff;
+
+      outline-offset:
+        4px;
+
+    }
+
+
+    #bonvi-chat {
+
+      position:
+        fixed;
+
+      bottom:
+        90px;
+
+      right:
+        20px;
+
+      z-index:
+        1001;
+
+      width:
+        min(350px, calc(100vw - 40px));
+
+      max-height:
+        500px;
+
+      background:
+        #0A0A0F;
+
+      border:
+        1px solid var(--gold);
+
+      border-radius:
+        16px;
+
+      display:
+        none;
+
+      flex-direction:
+        column;
+
+      overflow:
+        hidden;
+
+      box-shadow:
+        0 0 25px rgba(255,215,0,.25);
+
+    }
+
+
+    .chat-header {
+
+      background:
+        var(--gold);
+
+      color:
+        #000;
+
+      padding:
+        14px;
+
+      font-weight:
+        800;
+
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        center;
+
+    }
+
+
+    .chat-close {
+
+      border:
+        none;
+
+      background:
+        transparent;
+
+      color:
+        #000;
+
+      cursor:
+        pointer;
+
+      font-size:
+        1rem;
+
+    }
+
+
+    .chat-body {
+
+      padding:
+        12px;
+
+      height:
+        300px;
+
+      overflow-y:
+        auto;
+
+    }
+
+
+    .bot {
+
+      background:
+        #fff;
+
+      color:
+        #000;
+
+      padding:
+        10px;
+
+      border-radius:
+        10px;
+
+      margin:
+        6px 0;
+
+      line-height:
+        1.5;
+
+    }
+
+
+    .user {
+
+      background:
+        var(--gold);
+
+      color:
+        #000;
+
+      padding:
+        9px;
+
+      border-radius:
+        10px;
+
+      margin:
+        6px 0;
+
+      text-align:
+        right;
+
+      margin-left:
+        auto;
+
+      width:
+        fit-content;
+
+    }
+
+
+    .suggestions {
+
+      padding:
+        10px;
+
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        6px;
+
+      border-top:
+        1px solid #222;
+
+    }
+
+
+    .suggestions button {
+
+      background:
+        var(--gold);
+
+      color:
+        #000;
+
+      border:
+        none;
+
+      padding:
+        7px 11px;
+
+      border-radius:
+        10px;
+
+      cursor:
+        pointer;
+
+      font-weight:
+        600;
+
+    }
+
+
+    .suggestions button:focus-visible {
+
+      outline:
+        2px solid #fff;
+
+      outline-offset:
+        2px;
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ====================================================== */
+
+    footer {
+
+      text-align:
+        center;
+
+      padding:
+        40px 20px;
+
+      font-size:
+        .85rem;
+
+      color:
+        #666;
+
+      border-top:
+        1px solid #222;
+
+      margin-top:
+        20px;
+
+    }
+
+
+    /* =====================================================
+       ANIMATION
+    ====================================================== */
+
+    @keyframes fadeInUp {
+
+      from {
+
+        opacity:
+          0;
+
+        transform:
+          translateY(25px);
+
+      }
+
+      to {
+
+        opacity:
+          1;
+
+        transform:
+          translateY(0);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       TABLET
+    ====================================================== */
+
+    @media (max-width: 1100px) {
+
+      .grid {
+
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+        padding:
+          30px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ====================================================== */
+
+    @media (max-width: 650px) {
+
+      header {
+        height:
+          360px;
+      }
+
+
+      .hero-content h1 {
+
+        font-size:
+          2rem;
+
+        letter-spacing:
+          2px;
+
+      }
+
+
+      .hero-content p {
+
+        font-size:
+          .88rem;
+
+      }
+
+
+      .grid {
+
+        grid-template-columns:
+          1fr;
+
+        padding:
+          25px 18px 45px;
+
+        gap:
+          20px;
+
+      }
+
+
+      .service {
+
+        min-height:
+          370px;
+
+      }
+
+
+      .section-title {
+
+        margin-top:
+          40px;
+
+      }
+
+
+      .section-title h2 {
+
+        font-size:
+          1.8rem;
+
+      }
+
+
+      .drawer {
+
+        width:
+          260px;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       REDUCED MOTION
+    ====================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior:
+          auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+
+        animation-duration:
+          .01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          .01ms !important;
+
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
-<button id="drawerToggle" class="drawer-toggle"><i class="fas fa-bars"></i></button>
 
-<div class="drawer" id="drawer">
-  <a href="index.html" class="drawer-item"><i class="fas fa-home"></i> Home</a>
-  <a href="service.html" class="drawer-item"><i class="fas fa-concierge-bell"></i> Services</a>
-   <a href="ads.html" class="drawer-item"><i class="fas fa-bullhorn"></i> Ads</a>
-  <a href="about.html" class="drawer-item"><i class="fas fa-info-circle"></i> About Us</a>
-  <a href="jobs.html" class="drawer-item"><i class="fas fa-briefcase"></i> Jobs</a>
-  <a href="contact.html" class="drawer-item"><i class="fas fa-envelope"></i> Contact</a>
-</div>
+  <!-- =====================================================
+       ACCESSIBLE NAVIGATION
+  ====================================================== -->
 
-<header>
-  <div class="header-slider">
-    <div class="slide" style="background-image:url('task1.jpg')"></div>
-    <div class="slide" style="background-image:url('tactical2.jpg')"></div>
-    <div class="slide" style="background-image:url('task2.jpg')"></div>
-    <div class="slide" style="background-image:url('task3.jpg')"></div>
-    <div class="slide" style="background-image:url('task4.jpg')"></div>
-    <div class="slide" style="background-image:url('task5.jpg')"></div>
-    <div class="slide" style="background-image:url('task6.jpg')"></div>
-    <div class="slide" style="background-image:url('task7.jpg')"></div>
-    <div class="slide" style="background-image:url('task8.jpg')"></div>
-    <div class="slide" style="background-image:url('task9.jpg')"></div>
-  </div>
-  <div class="header-overlay"></div>
-  <a href="https://bonvincogallery.netlify.app/" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--gold); color: black; padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; z-index: 3; text-transform: uppercase;"><i class="fas fa-images"></i> Explore Gallery</a>
-</header>
+  <button
+    id="drawerToggle"
+    class="drawer-toggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="drawer"
+  >
 
-<div class="section-title">
-  <h1 id="servicesTitle"></h1>
-</div>
+    <i
+      class="fas fa-bars"
+      aria-hidden="true"
+    ></i>
 
-<div class="switch-container">
-  <p>Toggle: Tactical vs Surveillance</p>
-  <label class="switch">
-    <input type="checkbox" id="serviceSwitch">
-    <span class="slider"></span>
-  </label>
-</div>
+  </button>
 
-<div class="grid" id="serviceGrid"></div>
 
-<!-- BONVI CHATBOT -->
-<style>
-#bonvi-btn{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#FFD700;
-  color:black;
-  border:none;
-  border-radius:50%;
-  width:60px;
-  height:60px;
-  font-size:20px;
-  cursor:pointer;
-  box-shadow:0 0 15px #FFD700;
-}
+  <nav
+    class="drawer"
+    id="drawer"
+    aria-label="Main navigation"
+  >
 
-/* CHAT BOX */
-#bonvi-chat{
-  position:fixed;
-  bottom:90px;
-  right:20px;
-  width:320px;
-  background:#0A0A0F;
-  border-radius:15px;
-  display:none;
-  flex-direction:column;
-  overflow:hidden;
-  box-shadow:0 0 20px #FFD700;
-}
+    <a
+      href="index.html"
+      class="drawer-item"
+    >
+      <i class="fas fa-home" aria-hidden="true"></i>
+      Home
+    </a>
 
-/* HEADER */
-.chat-header{
-  background:#FFD700;
-  color:black;
-  padding:10px;
-  font-weight:bold;
-}
 
-/* MESSAGES */
-.chat-body{
-  padding:10px;
-  height:300px;
-  overflow-y:auto;
-}
+    <a
+      href="service.html"
+      class="drawer-item"
+      aria-current="page"
+    >
+      <i class="fas fa-shield-halved" aria-hidden="true"></i>
+      Services
+    </a>
 
-/* BUBBLES */
-.bot{
-  background:white;
-  color:black;
-  padding:8px;
-  border-radius:10px;
-  margin:5px 0;
-}
 
-.user{
-  background:#FFD700;
-  color:black;
-  padding:8px;
-  border-radius:10px;
-  margin:5px 0;
-  text-align:right;
-}
+    <a
+      href="ads.html"
+      class="drawer-item"
+    >
+      <i class="fas fa-bullhorn" aria-hidden="true"></i>
+      Ads
+    </a>
 
-/* SUGGESTIONS */
-.suggestions{
-  padding:10px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:5px;
-}
 
-.suggestions button{
-  background:#FFD700;
-  border:none;
-  padding:5px 10px;
-  border-radius:10px;
-  cursor:pointer;
-}
-</style>
+    <a
+      href="about.html"
+      class="drawer-item"
+    >
+      <i class="fas fa-info-circle" aria-hidden="true"></i>
+      About Us
+    </a>
 
-<button id="bonvi-btn">💬</button>
 
-<div id="bonvi-chat">
-  <div class="chat-header">✨ Bonvi Assistant</div>
-  <div class="chat-body" id="chatBody"></div>
-  <div class="suggestions" id="suggestions">
-    <button onclick="send('location')">Location</button>
-    <button onclick="send('services')">Services</button>
-    <button onclick="send('contact')">Contact</button>
-    <button onclick="send('faq')">FAQ</button>
-  </div>
-</div>
+    <a
+      href="jobs.html"
+      class="drawer-item"
+    >
+      <i class="fas fa-briefcase" aria-hidden="true"></i>
+      Jobs
+    </a>
 
-<script>
-const chat = document.getElementById("bonvi-chat");
-const body = document.getElementById("chatBody");
-const suggestions = document.getElementById("suggestions");
 
-document.getElementById("bonvi-btn").onclick = ()=>{
-  chat.style.display = chat.style.display === "flex" ? "none" : "flex";
-  chat.style.flexDirection = "column";
-};
+    <a
+      href="contact.html"
+      class="drawer-item"
+    >
+      <i class="fas fa-envelope" aria-hidden="true"></i>
+      Contact
+    </a>
 
-// GREETING
-function greet(){
-  addBot(`Hi 👋 I'm Bonvi, your friendly assistant!<br><br>
-  I can help you with our location, services, or connecting you with our admin team.<br><br>
-  What would you like to know today?`);
-}
-greet();
+  </nav>
 
-// SEND FUNCTION
-function send(type){
-  addUser(type);
 
-if(type === "location"){
-  addBot(`Sure! Here's our location 📍:<br>
-  9 Corridor Crest, Ben Fleur, eMalahleni 1049<br><br>
-  <img src="map.jpg" alt="Map Location" style="width:100%;border-radius:10px;">`);
-  showSuggestions(["services","contact","faq"]);
-}
+  <!-- =====================================================
+       HERO SLIDER
+  ====================================================== -->
 
- 
-else if(type === "services"){
-  addBot(`Absolutely! Here are our services 🛡:<br><br>
-  
-<b>Armed Response</b><br>
-Authorized armed response with trained personnel to protect your property and personnel quickly and efficiently.<br><br>
+  <header
+    aria-label="Bonvinco Tactical Response services"
+  >
 
-<b>Railway Protection</b><br>
-Protection of railway assets and infrastructure to ensure safety, security, and operational continuity.<br><br>
+    <div
+      class="header-slider"
+      id="headerSlider"
+    >
 
-<b>Mobile Patrol</b><br>
-Regular vehicle patrols for rapid area monitoring and deterrence of unauthorized activity.<br><br>
+      <div
+        class="slide active"
+        style="background-image:url('task1.jpg')"
+        role="img"
+        aria-label="Bonvinco Tactical Response security operations"
+      ></div>
 
-<b>Event Security</b><br>
-Professional crowd and event control to ensure safety and smooth operations during public and private events.<br><br>
 
-<b>VIP Escort</b><br>
-Close protection services for high-profile individuals to guarantee personal safety.<br><br>
+      <div
+        class="slide"
+        style="background-image:url('tactical2.jpg')"
+        role="img"
+        aria-label="Bonvinco tactical security operations"
+      ></div>
 
-<b>Dog Handling (K9)</b><br>
-Highly trained K9 units for security patrols, detection, and threat deterrence.<br><br>
 
-<b>Drone Surveillance</b><br>
-Aerial security surveillance services for enhanced monitoring of large areas or difficult-to-reach locations.<br><br>
+      <div
+        class="slide"
+        style="background-image:url('task2.jpg')"
+        role="img"
+        aria-label="Bonvinco security services"
+      ></div>
 
-<b>CCTV Installation</b><br>
-Professional setup and monitoring of CCTV systems to ensure constant surveillance and safety.`);
-  
-  showSuggestions(["pricing","book","contact","faq"]);
-}
-  else if(type === "contact"){
-    addBot(`Of course! You can contact us 📞:<br><br>
-    📧 vacancies@boninco.com<br>
-    📧 admin@bonvinco.com<br><br>
-    Ermelo – 087 149 4670<br>
-    Witbank – 083 621 7499<br><br>
-    🏢 OFFICE 1, 14 Kerk Street, Ermelo, 2351`);
-    showSuggestions(["location","services","faq"]);
-  }
 
-  else if(type === "faq"){
-    addBot(`Here are some frequently asked questions 🤔:<br><br>
-    1️⃣ What are your operating hours?<br>
-    2️⃣ How do I book a service?<br>
-    3️⃣ Do you provide emergency support?<br><br>
-    Click a question to see the answer.`);
-    showSuggestions(["hours","book","emergency","contact"]);
-  }
+      <div
+        class="slide"
+        style="background-image:url('task3.jpg')"
+        role="img"
+        aria-label="Bonvinco protection operations"
+      ></div>
 
-  else if(type === "hours"){
-    addBot(`🕘 We operate 24/7 to ensure your safety!`);
-    showSuggestions(["services","contact","faq"]);
-  }
 
-  else if(type === "book"){
-    addBot(`To book a service, just contact our admin via 📧 admin@bonvinco.com or 📞 087 149 4670. They'll assist you immediately!`);
-    showSuggestions(["services","contact","faq"]);
-  }
+      <div
+        class="slide"
+        style="background-image:url('task4.jpg')"
+        role="img"
+        aria-label="Bonvinco tactical response team"
+      ></div>
 
-  else if(type === "emergency"){
-    addBot(`Yes! We provide emergency response 24/7. 🚨<br>
-    Call our emergency line immediately if needed.`);
-    showSuggestions(["services","contact","faq"]);
-  }
 
-  else if(type === "pricing"){
-    addBot(`Pricing depends on the service. For exact quotes, please contact us via 📧 admin@bonvinco.com.`);
-    showSuggestions(["services","contact","faq"]);
-  }
-}
+      <div
+        class="slide"
+        style="background-image:url('task5.jpg')"
+        role="img"
+        aria-label="Bonvinco security operations"
+      ></div>
 
-// SHOW DYNAMIC SUGGESTIONS
-function showSuggestions(options){
-  suggestions.innerHTML = "";
-  const map = {
-    location:"Location",
-    services:"Services",
-    contact:"Contact",
-    faq:"FAQ",
-    hours:"Operating Hours",
-    book:"Book a Service",
-    emergency:"Emergency Support",
-    pricing:"Pricing"
-  };
 
-  options.forEach(opt=>{
-    let btn = document.createElement("button");
-    btn.innerHTML = map[opt];
-    btn.onclick = ()=>send(opt);
-    suggestions.appendChild(btn);
-  });
-}
+      <div
+        class="slide"
+        style="background-image:url('task6.jpg')"
+        role="img"
+        aria-label="Bonvinco tactical protection"
+      ></div>
 
-// MESSAGE FUNCTIONS
-function addBot(text){
-  body.innerHTML += `<div class="bot">${text}</div>`;
-  body.scrollTop = body.scrollHeight;
-}
 
-function addUser(text){
-  body.innerHTML += `<div class="user">${text}</div>`;
-}
-</script>
-<footer>⚡️ Powered by BlackLogic Technologies Pty Ltd 💻</footer>
+      <div
+        class="slide"
+        style="background-image:url('task7.jpg')"
+        role="img"
+        aria-label="Bonvinco security response"
+      ></div>
 
-<script>
-// UI Elements
-const drawer = document.getElementById('drawer');
-const toggleBtn = document.getElementById('drawerToggle');
-const grid = document.getElementById("serviceGrid");
-const serviceSwitch = document.getElementById("serviceSwitch");
 
-// Navigation
-toggleBtn.onclick = () => drawer.classList.toggle('open');
+      <div
+        class="slide"
+        style="background-image:url('task8.jpg')"
+        role="img"
+        aria-label="Bonvinco professional security services"
+      ></div>
 
-// Typewriter
-const titleText = "Our Mission Profile";
-let tIndex = 0;
-function typeTitle() {
-  document.getElementById("servicesTitle").textContent = titleText.substring(0, tIndex++);
-  if (tIndex <= titleText.length) setTimeout(typeTitle, 100);
-}
-typeTitle();
 
-// Data
-const tactical = [
-  {icon:"fa-shield-alt", title:"Armed Response", desc:"Rapid-deployment tactical units authorized for high-threat intervention and property protection."},
-  {icon:"fa-train", title:"Railway Protection", desc:"Securing critical infrastructure, preventing cable theft, and ensuring commuter safety on rail lines."},
-  {icon:"fa-car", title:"Mobile Patrol", desc:"24/7 proactive vehicle visibility to deter crime and monitor residential or industrial zones."},
-  {icon:"fa-user-shield", title:"Event Security", desc:"Specialized crowd control and logistical security for large-scale public or private gatherings."}
-];
+      <div
+        class="slide"
+        style="background-image:url('task9.jpg')"
+        role="img"
+        aria-label="Bonvinco Tactical Response operations"
+      ></div>
 
-const surveillance = [
-  {icon:"fa-user-tie", title:"VIP Escort", desc:"Discreet and effective close protection for high-profile personnel and high-value assets."},
-  {icon:"fa-dog", title:"K9 Handling", desc:"Trained canine units for explosives detection, tracking, and perimeter deterrence."},
-  {icon:"fa-drone", title:"Drone Ops", desc:"Aerial intelligence and thermal imaging for large-area monitoring and perimeter breaches."},
-  {icon:"fa-video", title:"CCTV Monitoring", desc:"Advanced control-room monitoring and professional installation of high-definition security grids."}
-];
+    </div>
 
-function renderServices(list) {
-  grid.innerHTML = "";
-  list.forEach((s, i) => {
-    const card = document.createElement("div");
-    card.className = "service";
-    card.style.animationDelay = `${i * 0.1}s`;
-    card.innerHTML = `
-      <div class="service-inner">
-        <div class="service-front">
-          <i class="fas ${s.icon}"></i>
-          <h4>${s.title}</h4>
-        </div>
-        <div class="service-back">
-          <p>${s.desc}</p>
-        </div>
-      </div>
-    `;
-    grid.appendChild(card);
-  });
-}
 
-renderServices(tactical);
-serviceSwitch.onchange = (e) => renderServices(e.target.checked ? surveillance : tactical);
+    <div
+      class="header-overlay"
+      aria-hidden="true"
+    ></div>
 
-// Chatbot Logic
-const chatBtn = document.getElementById("bonvi-btn");
-const chatBox = document.getElementById("bonvi-chat");
-const chatBody = document.getElementById("chatBody");
 
-chatBtn.onclick = () => chatBox.style.display = chatBox.style.display === "flex" ? "none" : "flex";
+    <div class="hero-content">
 
-function addBotMsg(text) {
-  chatBody.innerHTML += `<div class="bot">${text}</div>`;
-  chatBody.scrollTop = chatBody.scrollHeight;
-}
+      <h1>
+        Bonvinco Security Services
+      </h1>
 
-addBotMsg("Welcome to Bonvinco Tactical. How can I assist with your security profile today?");
-</script>
+      <p>
+        Professional tactical response, protection,
+        surveillance and security solutions designed
+        to protect people, property and operations.
+      </p>
+
+
+      <a
+        href="https://bonvincogallery.netlify.app/"
+        class="gallery-button"
+      >
+
+        <i
+          class="fas fa-images"
+          aria-hidden="true"
+        ></i>
+
+        Explore Gallery
+
+      </a>
+
+    </div>
+
+
+    <div
+      class="slider-dots"
+      id="sliderDots"
+      aria-label="Hero image controls"
+    ></div>
+
+  </header>
+
+
+  <!-- =====================================================
+       SERVICES INTRODUCTION
+  ====================================================== -->
+
+  <section
+    class="section-title"
+    aria-labelledby="servicesTitle"
+  >
+
+    <h2 id="servicesTitle">
+      Our Mission Profile
+    </h2>
+
+    <p>
+      Bonvinco Tactical Response delivers a range of
+      security and protection capabilities, from rapid
+      response and mobile patrols to specialist
+      surveillance, close protection and infrastructure
+      security.
+    </p>
+
+  </section>
+
+
+  <!-- =====================================================
+       SERVICES GRID
+  ====================================================== -->
+
+  <main
+    class="grid"
+    id="serviceGrid"
+    aria-label="Bonvinco Tactical Response security services"
+  ></main>
+
+
+  <!-- =====================================================
+       BONVI CHATBOT
+  ====================================================== -->
+
+  <button
+    id="bonvi-btn"
+    type="button"
+    aria-label="Open Bonvi Assistant"
+    aria-expanded="false"
+    aria-controls="bonvi-chat"
+  >
+
+    <i
+      class="fas fa-comments"
+      aria-hidden="true"
+    ></i>
+
+  </button>
+
+
+  <section
+    id="bonvi-chat"
+    aria-label="Bonvi Assistant"
+    aria-hidden="true"
+  >
+
+    <div class="chat-header">
+
+      <span>
+        ✨ Bonvi Assistant
+      </span>
+
+      <button
+        class="chat-close"
+        id="chatClose"
+        type="button"
+        aria-label="Close Bonvi Assistant"
+      >
+
+        <i
+          class="fas fa-times"
+          aria-hidden="true"
+        ></i>
+
+      </button>
+
+    </div>
+
+
+    <div
+      class="chat-body"
+      id="chatBody"
+      aria-live="polite"
+    ></div>
+
+
+    <div
+      class="suggestions"
+      id="suggestions"
+    >
+
+      <button onclick="send('location')">
+        Location
+      </button>
+
+      <button onclick="send('services')">
+        Services
+      </button>
+
+      <button onclick="send('contact')">
+        Contact
+      </button>
+
+      <button onclick="send('faq')">
+        FAQ
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer>
+
+    ⚡️ Powered by
+    BlackLogic Technologies Pty Ltd
+    💻
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+    /* =====================================================
+       HERO FADE SLIDER
+    ====================================================== */
+
+    const slides =
+      document.querySelectorAll('.slide');
+
+    const sliderDots =
+      document.getElementById('sliderDots');
+
+    let currentSlide =
+      0;
+
+    let sliderTimer;
+
+
+    function createSliderDots() {
+
+      slides.forEach((slide, index) => {
+
+        const dot =
+          document.createElement('button');
+
+        dot.className =
+          'slider-dot';
+
+        dot.type =
+          'button';
+
+        dot.setAttribute(
+          'aria-label',
+          `Show service image ${index + 1}`
+        );
+
+        if (index === 0) {
+
+          dot.classList.add('active');
+
+        }
+
+        dot.addEventListener(
+          'click',
+          () => {
+
+            showSlide(index);
+
+            restartSlider();
+
+          }
+        );
+
+        sliderDots.appendChild(dot);
+
+      });
+
+    }
+
+
+    function showSlide(index) {
+
+      slides.forEach((slide) => {
+
+        slide.classList.remove('active');
+
+      });
+
+
+      const dots =
+        document.querySelectorAll('.slider-dot');
+
+      dots.forEach((dot) => {
+
+        dot.classList.remove('active');
+
+      });
+
+
+      currentSlide =
+        index;
+
+      slides[currentSlide]
+        .classList.add('active');
+
+      if (dots[currentSlide]) {
+
+        dots[currentSlide]
+          .classList.add('active');
+
+      }
+
+    }
+
+
+    function nextSlide() {
+
+      const next =
+        (currentSlide + 1) % slides.length;
+
+      showSlide(next);
+
+    }
+
+
+    function startSlider() {
+
+      sliderTimer =
+        setInterval(
+          nextSlide,
+          5000
+        );
+
+    }
+
+
+    function restartSlider() {
+
+      clearInterval(sliderTimer);
+
+      startSlider();
+
+    }
+
+
+    createSliderDots();
+
+    startSlider();
+
+
+    /* =====================================================
+       SERVICE DATA
+    ====================================================== */
+
+    const services = [
+
+      {
+        image: "task1.jpg",
+        icon: "fa-shield-halved",
+        title: "Armed Response",
+        desc:
+          "Rapid-deployment tactical units for high-threat intervention, emergency response and property protection."
+      },
+
+      {
+        image: "rail.jpg",
+        icon: "fa-train",
+        title: "Railway Protection",
+        desc:
+          "Security support for railway assets and critical infrastructure, helping protect operations and deter criminal activity."
+      },
+
+      {
+        image: "task3.jpg",
+        icon: "fa-car",
+        title: "Mobile Patrol",
+        desc:
+          "Proactive mobile patrol operations providing visibility, deterrence and responsive monitoring across designated areas."
+      },
+
+      {
+        image: "task5.jpg",
+        icon: "fa-user-shield",
+        title: "Event Security",
+        desc:
+          "Professional security and crowd-management support for public events, private functions and large-scale gatherings."
+      },
+
+      {
+        image: "task4.jpg",
+        icon: "fa-user-tie",
+        title: "VIP Escort",
+        desc:
+          "Discreet close-protection and escort services designed to support the safety of high-profile individuals and valuable assets."
+      },
+
+      {
+        image: "k9.jpg",
+        icon: "fa-dog",
+        title: "K9 Handling",
+        desc:
+          "Specialized canine security capabilities supporting patrols, detection activities and threat deterrence."
+      },
+
+      {
+        image: "drone.jpg",
+        icon: "fa-drone",
+        title: "Drone Surveillance",
+        desc:
+          "Aerial surveillance capabilities designed to support monitoring of large areas, perimeters and difficult-to-reach locations."
+      },
+
+      {
+        image: "cctv.jpg",
+        icon: "fa-video",
+        title: "CCTV Monitoring",
+        desc:
+          "Professional CCTV installation and monitoring solutions supporting continuous surveillance and security operations."
+      }
+
+    ];
+
+
+    /* =====================================================
+       RENDER SERVICE CARDS
+    ====================================================== */
+
+    const serviceGrid =
+      document.getElementById(
+        'serviceGrid'
+      );
+
+
+    function renderServices() {
+
+      serviceGrid.innerHTML = '';
+
+      services.forEach(
+        (service, index) => {
+
+          const article =
+            document.createElement('article');
+
+          article.className =
+            'service';
+
+          article.style.animationDelay =
+            `${index * 0.08}s`;
+
+
+          article.innerHTML = `
+
+            <div class="service-image-wrap">
+
+              <img
+                class="service-image"
+                src="${service.image}"
+                alt="${service.title} security service provided by Bonvinco Tactical Response"
+                loading="${index < 4 ? 'eager' : 'lazy'}"
+              >
+
+            </div>
+
+
+            <div class="service-content">
+
+              <div
+                class="service-icon"
+                aria-hidden="true"
+              >
+
+                <i
+                  class="fas ${service.icon}"
+                ></i>
+
+              </div>
+
+
+              <h3>
+                ${service.title}
+              </h3>
+
+
+              <p>
+                ${service.desc}
+              </p>
+
+            </div>
+
+          `;
+
+
+          serviceGrid.appendChild(
+            article
+          );
+
+        }
+
+      );
+
+    }
+
+
+    renderServices();
+
+
+    /* =====================================================
+       NAVIGATION DRAWER
+    ====================================================== */
+
+    const drawer =
+      document.getElementById(
+        'drawer'
+      );
+
+    const toggleBtn =
+      document.getElementById(
+        'drawerToggle'
+      );
+
+
+    toggleBtn.addEventListener(
+      'click',
+      () => {
+
+        const isOpen =
+          drawer.classList.toggle(
+            'open'
+          );
+
+        toggleBtn.setAttribute(
+          'aria-expanded',
+          String(isOpen)
+        );
+
+        toggleBtn.setAttribute(
+          'aria-label',
+          isOpen
+            ? 'Close navigation menu'
+            : 'Open navigation menu'
+        );
+
+      }
+    );
+
+
+    /* =====================================================
+       CHATBOT
+    ====================================================== */
+
+    const chat =
+      document.getElementById(
+        'bonvi-chat'
+      );
+
+    const chatButton =
+      document.getElementById(
+        'bonvi-btn'
+      );
+
+    const chatClose =
+      document.getElementById(
+        'chatClose'
+      );
+
+    const chatBody =
+      document.getElementById(
+        'chatBody'
+      );
+
+    const suggestions =
+      document.getElementById(
+        'suggestions'
+      );
+
+
+    function openChat() {
+
+      chat.style.display =
+        'flex';
+
+      chat.setAttribute(
+        'aria-hidden',
+        'false'
+      );
+
+      chatButton.setAttribute(
+        'aria-expanded',
+        'true'
+      );
+
+    }
+
+
+    function closeChat() {
+
+      chat.style.display =
+        'none';
+
+      chat.setAttribute(
+        'aria-hidden',
+        'true'
+      );
+
+      chatButton.setAttribute(
+        'aria-expanded',
+        'false'
+      );
+
+    }
+
+
+    chatButton.addEventListener(
+      'click',
+      () => {
+
+        const open =
+          chat.style.display === 'flex';
+
+        open
+          ? closeChat()
+          : openChat();
+
+      }
+    );
+
+
+    chatClose.addEventListener(
+      'click',
+      closeChat
+    );
+
+
+    /* =====================================================
+       CHAT GREETING
+    ====================================================== */
+
+    function greet() {
+
+      addBot(`
+        Hi 👋 I'm Bonvi, your friendly assistant!
+        <br><br>
+        I can help you with our location,
+        services, contact information or
+        general questions.
+        <br><br>
+        What would you like to know today?
+      `);
+
+    }
+
+
+    greet();
+
+
+    /* =====================================================
+       CHAT SEND
+    ====================================================== */
+
+    function send(type) {
+
+      addUser(
+        type.charAt(0).toUpperCase()
+        + type.slice(1)
+      );
+
+
+      if (type === "location") {
+
+        addBot(`
+          Sure! Here's our location 📍:
+          <br><br>
+          9 Corridor Crest,
+          Ben Fleur,
+          eMalahleni 1049
+          <br><br>
+          <img
+            src="map.jpg"
+            alt="Bonvinco Tactical Response location map"
+            style="width:100%;border-radius:10px;"
+          >
+        `);
+
+        showSuggestions([
+          "services",
+          "contact",
+          "faq"
+        ]);
+
+      }
+
+
+      else if (type === "services") {
+
+        addBot(`
+          <strong>Bonvinco Security Services</strong>
+          <br><br>
+
+          <strong>Armed Response</strong><br>
+          Rapid response and property protection.
+          <br><br>
+
+          <strong>Railway Protection</strong><br>
+          Protection of railway assets and infrastructure.
+          <br><br>
+
+          <strong>Mobile Patrol</strong><br>
+          Proactive patrol and area monitoring.
+          <br><br>
+
+          <strong>Event Security</strong><br>
+          Professional event and crowd security.
+          <br><br>
+
+          <strong>VIP Escort</strong><br>
+          Close protection and escort services.
+          <br><br>
+
+          <strong>K9 Handling</strong><br>
+          Canine-supported security and detection.
+          <br><br>
+
+          <strong>Drone Surveillance</strong><br>
+          Aerial monitoring capabilities.
+          <br><br>
+
+          <strong>CCTV Monitoring</strong><br>
+          Professional CCTV security solutions.
+        `);
+
+        showSuggestions([
+          "pricing",
+          "book",
+          "contact",
+          "faq"
+        ]);
+
+      }
+
+
+      else if (type === "contact") {
+
+        addBot(`
+          You can contact Bonvinco Tactical Response:
+          <br><br>
+
+          📧 admin@bonvinco.com
+          <br><br>
+
+          Ermelo – 087 149 4670
+          <br>
+          Witbank – 083 621 7499
+          <br><br>
+
+          🏢 OFFICE 1,
+          14 Kerk Street,
+          Ermelo, 2351
+        `);
+
+        showSuggestions([
+          "location",
+          "services",
+          "faq"
+        ]);
+
+      }
+
+
+      else if (type === "faq") {
+
+        addBot(`
+          Frequently Asked Questions:
+          <br><br>
+
+          1️⃣ What are your operating hours?
+          <br><br>
+
+          2️⃣ How do I book a service?
+          <br><br>
+
+          3️⃣ Do you provide emergency support?
+        `);
+
+        showSuggestions([
+          "hours",
+          "book",
+          "emergency",
+          "contact"
+        ]);
+
+      }
+
+
+      else if (type === "hours") {
+
+        addBot(
+          "🕘 Bonvinco provides 24/7 security response."
+        );
+
+        showSuggestions([
+          "services",
+          "contact",
+          "faq"
+        ]);
+
+      }
+
+
+      else if (type === "book") {
+
+        addBot(`
+          To enquire about booking a service,
+          contact the Bonvinco administration team:
+          <br><br>
+          📧 admin@bonvinco.com
+          <br>
+          📞 087 149 4670
+        `);
+
+        showSuggestions([
+          "services",
+          "contact",
+          "faq"
+        ]);
+
+      }
+
+
+      else if (type === "emergency") {
+
+        addBot(`
+          🚨 Bonvinco provides emergency
+          response capabilities.
+          <br><br>
+          For immediate assistance,
+          contact the appropriate Bonvinco
+          response or administration line.
+        `);
+
+        showSuggestions([
+          "contact",
+          "services",
+          "faq"
+        ]);
+
+      }
+
+
+      else if (type === "pricing") {
+
+        addBot(`
+          Security service pricing depends
+          on the required service and operational
+          requirements.
+          <br><br>
+          Contact the Bonvinco administration team
+          for a quotation.
+        `);
+
+        showSuggestions([
+          "services",
+          "contact",
+          "faq"
+        ]);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       CHAT SUGGESTIONS
+    ====================================================== */
+
+    function showSuggestions(options) {
+
+      suggestions.innerHTML =
+        '';
+
+      const map = {
+
+        location:
+          "Location",
+
+        services:
+          "Services",
+
+        contact:
+          "Contact",
+
+        faq:
+          "FAQ",
+
+        hours:
+          "Operating Hours",
+
+        book:
+          "Book a Service",
+
+        emergency:
+          "Emergency Support",
+
+        pricing:
+          "Pricing"
+
+      };
+
+
+      options.forEach(
+        option => {
+
+          const button =
+            document.createElement(
+              'button'
+            );
+
+          button.type =
+            'button';
+
+          button.textContent =
+            map[option];
+
+          button.addEventListener(
+            'click',
+            () => send(option)
+          );
+
+          suggestions.appendChild(
+            button
+          );
+
+        }
+      );
+
+    }
+
+
+    /* =====================================================
+       CHAT MESSAGE FUNCTIONS
+    ====================================================== */
+
+    function addBot(message) {
+
+      const element =
+        document.createElement(
+          'div'
+        );
+
+      element.className =
+        'bot';
+
+      element.innerHTML =
+        message;
+
+      chatBody.appendChild(
+        element
+      );
+
+      chatBody.scrollTop =
+        chatBody.scrollHeight;
+
+    }
+
+
+    function addUser(message) {
+
+      const element =
+        document.createElement(
+          'div'
+        );
+
+      element.className =
+        'user';
+
+      element.textContent =
+        message;
+
+      chatBody.appendChild(
+        element
+      );
+
+      chatBody.scrollTop =
+        chatBody.scrollHeight;
+
+    }
+
+
+    /* =====================================================
+       ESCAPE KEY
+    ====================================================== */
+
+    document.addEventListener(
+      'keydown',
+      event => {
+
+        if (
+          event.key === 'Escape'
+        ) {
+
+          closeChat();
+
+          drawer.classList.remove(
+            'open'
+          );
+
+          toggleBtn.setAttribute(
+            'aria-expanded',
+            'false'
+          );
+
+        }
+
+      }
+    );
+
+
+    /* =====================================================
+       PAUSE SLIDER WHEN TAB IS HIDDEN
+    ====================================================== */
+
+    document.addEventListener(
+      'visibilitychange',
+      () => {
+
+        if (
+          document.hidden
+        ) {
+
+          clearInterval(
+            sliderTimer
+          );
+
+        } else {
+
+          startSlider();
+
+        }
+
+      }
+    );
+
+  </script>
+
 
 </body>
+
 </html>
