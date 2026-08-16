@@ -1,227 +1,2660 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Bonvinco Tactical Response</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<style>
-  :root {
-    --gold: #FFD700;
-    --dark: #0A0A0F;
-    --card: #16161E;
-    --border: #2D2D35;
+  <meta charset="UTF-8">
+
+  <!-- Core SEO -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Bonvinco Tactical Response | Security & Tactical Services</title>
+
+  <meta
+    name="description"
+    content="Contact Bonvinco Tactical Response for security, tactical response and protection inquiries. Reach our Ermelo and Witbank teams by phone, email or WhatsApp."
+  >
+
+  <meta
+    name="keywords"
+    content="Bonvinco Tactical Response, Bonvinco security, tactical response, security services, armed response, K9 security, Ermelo security, Witbank security, Mpumalanga security"
+  >
+
+  <meta name="author" content="Bonvinco Tactical Response">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://bonvinco.com/contact.html">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#0A0A0F">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Bonvinco Tactical Response">
+  <meta
+    property="og:description"
+    content="Connect with Bonvinco Tactical Response for security and tactical service inquiries."
+  >
+  <meta property="og:url" content="https://bonvinco.com/contact.html">
+  <meta property="og:site_name" content="Bonvinco Tactical Response">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Bonvinco Tactical Response">
+  <meta
+    name="twitter:description"
+    content="Contact Bonvinco Tactical Response for security, tactical response and protection inquiries."
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+
+  <style>
+    :root {
+      --gold: #FFD700;
+      --gold-light: #FFE66D;
+      --gold-dark: #C9A900;
+
+      --dark: #08080C;
+      --dark-soft: #0D0D13;
+      --card: #14141C;
+      --card-hover: #191923;
+
+      --border: #292932;
+      --border-light: rgba(255, 215, 0, 0.18);
+
+      --text: #FFFFFF;
+      --text-soft: #B7B7BF;
+      --text-muted: #777780;
+
+      --success: #25D366;
+      --danger: #FF5A5A;
+
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+
+      --transition: 0.25s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 50% -20%,
+          rgba(255, 215, 0, 0.08),
+          transparent 40%
+        ),
+        var(--dark);
+
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    body.drawer-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    /* =========================================================
+       ACCESSIBILITY
+    ========================================================= */
+
+    :focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    .drawer-toggle {
+      position: fixed;
+      top: 22px;
+      right: 22px;
+
+      width: 52px;
+      height: 52px;
+
+      z-index: 10001;
+
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 14px;
+
+      background: var(--gold);
+      color: #000;
+
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 1.15rem;
+
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(255, 215, 0, 0.08);
+
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+    }
+
+    .drawer-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(255, 215, 0, 0.2);
+    }
+
+    .drawer-toggle.active {
+      background: #fff;
+    }
+
+    .drawer {
+      position: fixed;
+
+      top: 0;
+      right: -340px;
+
+      width: min(330px, 88vw);
+      height: 100vh;
+
+      z-index: 10000;
+
+      background:
+        linear-gradient(
+          160deg,
+          rgba(20, 20, 28, 0.99),
+          rgba(7, 7, 11, 0.99)
+        );
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      border-left: 1px solid var(--border-light);
+
+      padding: 105px 0 30px;
+
+      display: flex;
+      flex-direction: column;
+
+      transition:
+        right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+      box-shadow: -20px 0 70px rgba(0, 0, 0, 0.5);
+    }
+
+    .drawer.open {
+      right: 0;
+    }
+
+    .drawer-brand {
+      padding: 0 30px 25px;
+
+      margin-bottom: 10px;
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .drawer-brand strong {
+      display: block;
+
+      color: var(--gold);
+
+      font-size: 0.95rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .drawer-brand span {
+      display: block;
+
+      margin-top: 6px;
+
+      color: var(--text-muted);
+
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .drawer-item {
+      position: relative;
+
+      padding: 17px 30px;
+
+      color: var(--text-soft);
+      text-decoration: none;
+
+      display: flex;
+      align-items: center;
+
+      gap: 15px;
+
+      font-weight: 650;
+
+      transition:
+        background var(--transition),
+        color var(--transition),
+        padding var(--transition);
+    }
+
+    .drawer-item i {
+      width: 20px;
+      text-align: center;
+      color: var(--gold);
+    }
+
+    .drawer-item:hover {
+      color: #fff;
+      background: rgba(255, 215, 0, 0.07);
+      padding-left: 36px;
+    }
+
+    .drawer-item.active {
+      color: var(--gold);
+      background: rgba(255, 215, 0, 0.08);
+    }
+
+    .drawer-item.active::before {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+
+      width: 3px;
+
+      background: var(--gold);
+    }
+
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+
+      z-index: 9999;
+
+      background: rgba(0, 0, 0, 0.65);
+
+      opacity: 0;
+      visibility: hidden;
+
+      transition:
+        opacity var(--transition),
+        visibility var(--transition);
+
+      backdrop-filter: blur(2px);
+    }
+
+    .drawer-overlay.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* =========================================================
+       PAGE
+    ========================================================= */
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+
+      margin: 0 auto;
+
+      padding:
+        110px 0
+        70px;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      position: relative;
+
+      text-align: center;
+
+      margin-bottom: 55px;
+    }
+
+    .status-line {
+      display: inline-flex;
+
+      align-items: center;
+      gap: 9px;
+
+      padding: 8px 13px;
+
+      border: 1px solid var(--border-light);
+      border-radius: 999px;
+
+      background: rgba(255, 215, 0, 0.045);
+
+      color: var(--gold);
+
+      font-size: 0.7rem;
+      font-weight: 800;
+
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      box-shadow:
+        0 0 10px rgba(255, 215, 0, 0.7);
+    }
+
+    .hero h1 {
+      margin: 22px 0 10px;
+
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+
+      line-height: 0.98;
+
+      letter-spacing: -1px;
+
+      text-transform: uppercase;
+
+      color: var(--gold);
+
+      text-shadow:
+        0 0 35px rgba(255, 215, 0, 0.08);
+    }
+
+    .hero h1 span {
+      display: block;
+      color: #fff;
+    }
+
+    .subtitle {
+      max-width: 650px;
+
+      margin: 0 auto;
+
+      color: var(--text-soft);
+
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .hero-meta {
+      display: flex;
+
+      justify-content: center;
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 24px;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 9px 13px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 8px;
+
+      background: rgba(255, 255, 255, 0.025);
+
+      color: var(--text-muted);
+
+      font-size: 0.75rem;
+    }
+
+    .hero-meta i {
+      color: var(--gold);
+    }
+
+    /* =========================================================
+       MAIN GRID
+    ========================================================= */
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(300px, 0.85fr);
+
+      gap: 25px;
+
+      align-items: start;
+    }
+
+    /* =========================================================
+       CARD
+    ========================================================= */
+
+    .card {
+      position: relative;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.025),
+          rgba(255, 255, 255, 0.008)
+        ),
+        var(--card);
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      padding: 28px;
+
+      margin-bottom: 20px;
+
+      box-shadow: var(--shadow);
+
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 215, 0, 0.5),
+          transparent
+        );
+
+      opacity: 0.65;
+    }
+
+    .card-heading {
+      margin-bottom: 25px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+
+      font-size: 0.68rem;
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 8px;
+    }
+
+    .card-heading h2 {
+      margin: 0;
+
+      font-size: 1.5rem;
+
+      letter-spacing: -0.3px;
+    }
+
+    .card-heading p {
+      margin: 8px 0 0;
+
+      color: var(--text-muted);
+
+      font-size: 0.85rem;
+
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       FORM
+    ========================================================= */
+
+    .form-group {
+      position: relative;
+
+      margin-bottom: 19px;
+    }
+
+    label {
+      display: flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      margin-bottom: 8px;
+
+      color: var(--text-soft);
+
+      font-size: 0.72rem;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+    }
+
+    label .required {
+      color: var(--gold);
+    }
+
+    .field-wrap {
+      position: relative;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+
+      padding: 14px 46px 14px 14px;
+
+      background: #08080B;
+
+      border: 1px solid var(--border);
+
+      border-radius: 10px;
+
+      color: #fff;
+
+      outline: none;
+
+      font-family: inherit;
+
+      font-size: 0.94rem;
+
+      transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+    }
+
+    textarea {
+      min-height: 130px;
+
+      resize: vertical;
+
+      padding-right: 14px;
+
+      line-height: 1.6;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #55555E;
+    }
+
+    input:hover,
+    textarea:hover {
+      border-color: #3B3B45;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--gold);
+
+      background: #0A0A0E;
+
+      box-shadow:
+        0 0 0 3px rgba(255, 215, 0, 0.07);
+    }
+
+    input.valid {
+      border-color: rgba(37, 211, 102, 0.55);
+    }
+
+    input.invalid {
+      border-color: rgba(255, 90, 90, 0.75);
+    }
+
+    .field-status {
+      position: absolute;
+
+      right: 14px;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      pointer-events: none;
+
+      color: var(--text-muted);
+    }
+
+    .field-status.valid {
+      color: var(--success);
+    }
+
+    .field-status.invalid {
+      color: var(--danger);
+    }
+
+    .field-error {
+      display: none;
+
+      margin-top: 6px;
+
+      color: #FF7777;
+
+      font-size: 0.72rem;
+    }
+
+    .field-error.visible {
+      display: block;
+    }
+
+    /* AI helper */
+
+    .ai-trigger {
+      position: absolute;
+
+      right: 12px;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      width: 31px;
+      height: 31px;
+
+      border: 1px solid #292932;
+      border-radius: 8px;
+
+      background: #111117;
+
+      color: #666;
+
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition:
+        color var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+    }
+
+    .ai-trigger:hover {
+      color: var(--gold);
+      border-color: var(--border-light);
+      background: rgba(255, 215, 0, 0.06);
+    }
+
+    .textarea-ai {
+      top: 20px;
+      transform: none;
+    }
+
+    .ai-hint {
+      position: absolute;
+
+      right: 0;
+      top: calc(100% + 8px);
+
+      max-width: 290px;
+
+      z-index: 20;
+
+      padding: 11px 13px;
+
+      border-radius: 9px;
+
+      background: var(--gold);
+
+      color: #000;
+
+      font-size: 0.75rem;
+
+      line-height: 1.4;
+
+      font-weight: 700;
+
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+      animation: hintIn 0.2s ease;
+    }
+
+    @keyframes hintIn {
+      from {
+        opacity: 0;
+        transform: translateY(-4px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* =========================================================
+       FORM FOOTER
+    ========================================================= */
+
+    .form-note {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 10px;
+
+      margin-top: 15px;
+
+      color: var(--text-muted);
+
+      font-size: 0.72rem;
+
+      line-height: 1.5;
+    }
+
+    .form-note i {
+      color: var(--gold);
+
+      margin-top: 2px;
+    }
+
+    .submit-btn {
+      position: relative;
+
+      width: 100%;
+
+      min-height: 54px;
+
+      margin-top: 8px;
+
+      padding: 14px 20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--gold),
+          #E5BE00
+        );
+
+      border: none;
+
+      border-radius: 10px;
+
+      color: #050505;
+
+      font-weight: 900;
+
+      cursor: pointer;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.2px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 12px;
+
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        filter var(--transition);
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 12px 30px rgba(255, 215, 0, 0.18);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
+    .submit-btn.loading {
+      pointer-events: none;
+      filter: grayscale(0.15);
+    }
+
+    /* =========================================================
+       DIRECT CONTACT
+    ========================================================= */
+
+    .contact-options {
+      display: grid;
+
+      gap: 12px;
+    }
+
+    .contact-action {
+      display: flex;
+
+      align-items: center;
+
+      gap: 14px;
+
+      padding: 15px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+
+      background: rgba(255, 255, 255, 0.015);
+
+      text-decoration: none;
+
+      transition:
+        transform var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+    }
+
+    .contact-action:hover {
+      transform: translateY(-2px);
+
+      border-color: var(--border-light);
+
+      background: rgba(255, 215, 0, 0.04);
+    }
+
+    .contact-icon {
+      flex: 0 0 43px;
+
+      width: 43px;
+      height: 43px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 10px;
+
+      background: rgba(255, 215, 0, 0.08);
+
+      color: var(--gold);
+
+      font-size: 1rem;
+    }
+
+    .contact-action.whatsapp .contact-icon {
+      color: var(--success);
+
+      background: rgba(37, 211, 102, 0.08);
+    }
+
+    .contact-copy {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .contact-copy small {
+      display: block;
+
+      color: var(--text-muted);
+
+      font-size: 0.65rem;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 3px;
+    }
+
+    .contact-copy strong {
+      display: block;
+
+      color: #fff;
+
+      font-size: 0.85rem;
+
+      overflow-wrap: anywhere;
+    }
+
+    .contact-arrow {
+      color: #555;
+
+      transition: color var(--transition);
+    }
+
+    .contact-action:hover .contact-arrow {
+      color: var(--gold);
+    }
+
+    /* =========================================================
+       COPY ROW
+    ========================================================= */
+
+    .copy-row {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding: 14px 0;
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .copy-row:last-child {
+      border-bottom: none;
+    }
+
+    .copy-content {
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      min-width: 0;
+    }
+
+    .copy-content i {
+      width: 20px;
+
+      color: var(--gold);
+
+      text-align: center;
+    }
+
+    .copy-content span {
+      color: var(--text-soft);
+
+      font-size: 0.85rem;
+
+      overflow-wrap: anywhere;
+    }
+
+    .copy-btn {
+      flex: 0 0 auto;
+
+      width: 35px;
+      height: 35px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 8px;
+
+      background: transparent;
+
+      color: #666;
+
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition:
+        color var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+    }
+
+    .copy-btn:hover {
+      color: var(--gold);
+
+      border-color: var(--border-light);
+
+      background: rgba(255, 215, 0, 0.05);
+    }
+
+    /* =========================================================
+       LOCATION
+    ========================================================= */
+
+    .location-box {
+      margin-top: 18px;
+
+      padding: 17px;
+
+      border-radius: 12px;
+
+      border: 1px solid var(--border);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 215, 0, 0.05),
+          transparent
+        );
+    }
+
+    .location-box .location-title {
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      color: var(--gold);
+
+      font-size: 0.72rem;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+    }
+
+    .location-box p {
+      margin: 9px 0 0;
+
+      color: var(--text-soft);
+
+      font-size: 0.85rem;
+
+      line-height: 1.5;
+    }
+
+    /* =========================================================
+       SOCIALS
+    ========================================================= */
+
+    .social-card {
+      text-align: center;
+
+      padding: 25px;
+    }
+
+    .social-card h2 {
+      margin: 0 0 7px;
+
+      font-size: 1rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.5px;
+    }
+
+    .social-card p {
+      margin: 0;
+
+      color: var(--text-muted);
+
+      font-size: 0.78rem;
+    }
+
+    .social-bar {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 11px;
+
+      margin-top: 20px;
+    }
+
+    .social-bar a {
+      width: 42px;
+      height: 42px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid var(--border);
+
+      border-radius: 10px;
+
+      color: var(--text-soft);
+
+      text-decoration: none;
+
+      transition:
+        transform var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        background var(--transition);
+    }
+
+    .social-bar a:hover {
+      transform: translateY(-3px);
+
+      color: var(--gold);
+
+      border-color: var(--border-light);
+
+      background: rgba(255, 215, 0, 0.05);
+    }
+
+    .social-bar a.whatsapp:hover {
+      color: var(--success);
+
+      border-color: rgba(37, 211, 102, 0.3);
+
+      background: rgba(37, 211, 102, 0.05);
+    }
+
+    /* =========================================================
+       QUICK CTA
+    ========================================================= */
+
+    .quick-response {
+      display: flex;
+
+      align-items: center;
+
+      gap: 13px;
+
+      padding: 15px;
+
+      margin-bottom: 20px;
+
+      border: 1px solid rgba(37, 211, 102, 0.15);
+
+      border-radius: 12px;
+
+      background: rgba(37, 211, 102, 0.035);
+    }
+
+    .quick-response-icon {
+      width: 40px;
+      height: 40px;
+
+      flex: 0 0 40px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: rgba(37, 211, 102, 0.1);
+
+      color: var(--success);
+    }
+
+    .quick-response strong {
+      display: block;
+
+      font-size: 0.8rem;
+    }
+
+    .quick-response span {
+      display: block;
+
+      margin-top: 3px;
+
+      color: var(--text-muted);
+
+      font-size: 0.7rem;
+    }
+
+    /* =========================================================
+       TOAST
+    ========================================================= */
+
+    .toast {
+      position: fixed;
+
+      left: 50%;
+
+      bottom: 25px;
+
+      z-index: 20000;
+
+      transform:
+        translate(-50%, 30px);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      min-width: min(360px, calc(100vw - 30px));
+
+      padding: 13px 16px;
+
+      border: 1px solid var(--border-light);
+
+      border-radius: 10px;
+
+      background: #17171F;
+
+      color: #fff;
+
+      box-shadow: var(--shadow);
+
+      font-size: 0.8rem;
+
+      transition:
+        opacity var(--transition),
+        transform var(--transition),
+        visibility var(--transition);
+    }
+
+    .toast.visible {
+      opacity: 1;
+
+      visibility: visible;
+
+      transform:
+        translate(-50%, 0);
+    }
+
+    .toast i {
+      color: var(--gold);
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      text-align: center;
+
+      margin-top: 45px;
+
+      padding-top: 25px;
+
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+      color: #55555D;
+
+      font-size: 0.68rem;
+
+      letter-spacing: 1px;
+    }
+
+    footer strong {
+      color: #777;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        max-width: 760px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 24px, 600px);
+
+        padding-top: 95px;
+      }
+
+      .drawer-toggle {
+        top: 15px;
+        right: 15px;
+
+        width: 48px;
+        height: 48px;
+      }
+
+      .hero {
+        margin-bottom: 38px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 12vw, 3.2rem);
+      }
+
+      .subtitle {
+        font-size: 0.88rem;
+      }
+
+      .card {
+        padding: 20px;
+
+        border-radius: 15px;
+      }
+
+      .card-heading h2 {
+        font-size: 1.25rem;
+      }
+
+      .hero-meta {
+        gap: 7px;
+      }
+
+      .hero-meta span {
+        font-size: 0.65rem;
+      }
+
+      .contact-action {
+        padding: 13px;
+      }
+
+      .copy-row {
+        align-items: flex-start;
+      }
+
+      .copy-content {
+        align-items: flex-start;
+      }
+
+      .copy-content i {
+        margin-top: 3px;
+      }
+
+      .ai-hint {
+        right: -5px;
+
+        max-width: 245px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <!-- Organization / Local Business Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Bonvinco Tactical Response",
+    "url": "https://bonvinco.com/",
+    "email": "admin@bonvinco.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "14 Kerk Street",
+      "addressLocality": "Ermelo",
+      "postalCode": "2351",
+      "addressCountry": "ZA"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+27-87-149-4670",
+        "contactType": "customer service",
+        "areaServed": "ZA"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+27-83-621-7499",
+        "contactType": "customer service",
+        "areaServed": "ZA"
+      }
+    ]
   }
-
-  body {
-    margin: 0;
-    font-family: 'Inter', 'Segoe UI', sans-serif;
-    background: var(--dark);
-    color: #fff;
-    padding: 20px;
-  }
-
-  .container { max-width: 800px; margin: 40px auto; }
-
-  h1.gold {
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-    color: var(--gold);
-  }
-
-  .subtitle { color: #888; margin-bottom: 30px; font-size: 0.9rem; }
-
-  /* --- Navigation Drawer --- */
-  .drawer-toggle {
-    position: fixed; top: 20px; right: 20px; z-index: 10001;
-    background: var(--gold); border: none; width: 45px; height: 45px;
-    border-radius: 50%; cursor: pointer; color: #000;
-  }
-
-  .drawer {
-    position: fixed; top: 0; right: -280px; width: 280px; height: 100%;
-    background: rgba(10, 10, 15, 0.98); backdrop-filter: blur(10px);
-    z-index: 10000; transition: 0.4s; border-left: 1px solid var(--border);
-    display: flex; flex-direction: column; padding-top: 80px;
-  }
-
-  .drawer.open { right: 0; }
-  .drawer-item {
-    padding: 15px 30px; color: var(--gold); text-decoration: none;
-    display: flex; align-items: center; gap: 15px; font-weight: bold;
-  }
-
-  /* --- Contact Cards --- */
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-
-  .reach-item {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 12px 0; border-bottom: 1px solid #222;
-  }
-
-  .reach-item:last-child { border: none; }
-  .reach-left { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; }
-  .reach-left i { color: var(--gold); width: 20px; }
-
-  .copy-btn { cursor: pointer; color: #555; transition: 0.3s; }
-  .copy-btn:hover { color: var(--gold); }
-
-  /* --- Consultation Form --- */
-  .form-group { position: relative; margin-bottom: 15px; }
-  label { display: block; font-size: 0.75rem; color: var(--gold); text-transform: uppercase; margin-bottom: 5px; font-weight: bold; }
-  
-  input, textarea {
-    width: 100%; padding: 12px; background: #000; border: 1px solid var(--border);
-    border-radius: 8px; color: #fff; box-sizing: border-box; font-family: inherit;
-  }
-
-  input:focus, textarea:focus { border-color: var(--gold); outline: none; }
-
-  .ai-trigger {
-    position: absolute; right: 10px; top: 32px;
-    color: #444; cursor: pointer; transition: 0.3s;
-  }
-  .ai-trigger:hover { color: var(--gold); }
-
-  .ai-hint {
-    background: var(--gold); color: #000; padding: 8px 12px;
-    border-radius: 6px; font-size: 0.8rem; font-weight: bold;
-    position: absolute; right: 40px; top: 25px; z-index: 10;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-  }
-
-  .submit-btn {
-    width: 100%; padding: 15px; background: var(--gold); border: none;
-    border-radius: 8px; font-weight: 800; cursor: pointer;
-    text-transform: uppercase; letter-spacing: 1px; margin-top: 10px;
-  }
-
-  /* --- Socials --- */
-  .social-bar {
-    display: flex; justify-content: center; gap: 25px; margin-top: 30px;
-  }
-  .social-bar a { color: #fff; font-size: 1.5rem; transition: 0.3s; }
-  .social-bar a:hover { color: var(--gold); transform: translateY(-3px); }
-
-</style>
+  </script>
 </head>
+
 <body>
 
-<button id="drawerToggle" class="drawer-toggle"><i class="fas fa-bars"></i></button>
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
 
-<div class="drawer" id="drawer">
-  <a href="index.html" class="drawer-item"><i class="fas fa-home"></i> Home</a>
-  <a href="service.html" class="drawer-item"><i class="fas fa-shield-alt"></i> Services</a>
-  <a href="about.html" class="drawer-item"><i class="fas fa-info-circle"></i> About</a>
-  <a href="jobs.html" class="drawer-item"><i class="fas fa-briefcase"></i> Jobs</a>
-  <a href="ads.html" class="drawer-item"><i class="fas fa-bullhorn"></i> Ads</a>
-  <a href="contact.html" class="drawer-item"><i class="fas fa-envelope"></i> Contact</a>
-</div>
+  <button
+    id="drawerToggle"
+    class="drawer-toggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-controls="drawer"
+    aria-expanded="false"
+  >
+    <i class="fas fa-bars" aria-hidden="true"></i>
+  </button>
 
-<div class="container">
-  <h1 class="gold">AI-Powered</h1>
-  <h1 class="gold">Consultation Portal</h1>
-  <p class="subtitle">Secure communication channel for tactical inquiries.</p>
+  <div
+    id="drawerOverlay"
+    class="drawer-overlay"
+    aria-hidden="true"
+  ></div>
 
-  <div class="card">
-    <div class="form-group">
-      <label>Full Identity</label>
-      <input id="fullName" placeholder="Mthokozisi Mathebula">
-      <i class="fas fa-robot ai-trigger" onclick="showHint(this, 'Provide your legal name for verification.')"></i>
+  <nav
+    id="drawer"
+    class="drawer"
+    aria-label="Main navigation"
+  >
+
+    <div class="drawer-brand">
+      <strong>Bonvinco</strong>
+      <span>Tactical Response</span>
     </div>
 
-    <div class="form-group">
-      <label>Electronic Mail</label>
-      <input id="email" type="email" placeholder="client@example.com">
-      <i class="fas fa-robot ai-trigger" onclick="showHint(this, 'Enter an email you check frequently.')"></i>
+    <a href="index.html" class="drawer-item">
+      <i class="fas fa-home" aria-hidden="true"></i>
+      <span>Home</span>
+    </a>
+
+    <a href="service.html" class="drawer-item">
+      <i class="fas fa-shield-halved" aria-hidden="true"></i>
+      <span>Services</span>
+    </a>
+
+    <a href="about.html" class="drawer-item">
+      <i class="fas fa-circle-info" aria-hidden="true"></i>
+      <span>About</span>
+    </a>
+
+    <a href="jobs.html" class="drawer-item">
+      <i class="fas fa-briefcase" aria-hidden="true"></i>
+      <span>Jobs</span>
+    </a>
+
+    <a href="ads.html" class="drawer-item">
+      <i class="fas fa-bullhorn" aria-hidden="true"></i>
+      <span>Ads</span>
+    </a>
+
+    <a
+      href="contact.html"
+      class="drawer-item active"
+      aria-current="page"
+    >
+      <i class="fas fa-envelope" aria-hidden="true"></i>
+      <span>Contact</span>
+    </a>
+
+  </nav>
+
+
+  <!-- =======================================================
+       MAIN
+  ======================================================== -->
+
+  <main class="container">
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+      <div class="status-line">
+        <span class="status-dot"></span>
+        Secure Communication Channel
+      </div>
+
+      <h1>
+        Contact
+        <span>Bonvinco</span>
+      </h1>
+
+      <p class="subtitle">
+        Connect with Bonvinco Tactical Response for security,
+        protection and tactical service inquiries.
+      </p>
+
+      <div class="hero-meta">
+
+        <span>
+          <i class="fas fa-shield-halved" aria-hidden="true"></i>
+          Tactical Response
+        </span>
+
+        <span>
+          <i class="fas fa-location-dot" aria-hidden="true"></i>
+          Mpumalanga
+        </span>
+
+        <span>
+          <i class="fas fa-lock" aria-hidden="true"></i>
+          Secure Inquiry
+        </span>
+
+      </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+
+    <div class="contact-grid">
+
+      <!-- ===================================================
+           CONSULTATION
+      ==================================================== -->
+
+      <section>
+
+        <div class="card">
+
+          <div class="card-heading">
+
+            <div class="eyebrow">
+              Consultation Portal
+            </div>
+
+            <h2>Start a Security Inquiry</h2>
+
+            <p>
+              Provide your details and describe your requirements.
+              Your inquiry will be prepared for WhatsApp communication.
+            </p>
+
+          </div>
+
+
+          <form id="consultForm" novalidate>
+
+            <!-- Full Name -->
+
+            <div class="form-group">
+
+              <label for="fullName">
+                Full Identity
+                <span class="required">*</span>
+              </label>
+
+              <div class="field-wrap">
+
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Your full name"
+                  required
+                  minlength="2"
+                  aria-required="true"
+                >
+
+                <button
+                  type="button"
+                  class="ai-trigger"
+                  aria-label="Help with full identity"
+                  onclick="showHint(this, 'Provide the name you would like Bonvinco to use when responding to your inquiry.')"
+                >
+                  <i class="fas fa-robot" aria-hidden="true"></i>
+                </button>
+
+                <span
+                  id="nameStatus"
+                  class="field-status"
+                  aria-hidden="true"
+                ></span>
+
+              </div>
+
+              <div
+                id="nameError"
+                class="field-error"
+              >
+                Please enter your full name.
+              </div>
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="form-group">
+
+              <label for="email">
+                Electronic Mail
+                <span class="required">*</span>
+              </label>
+
+              <div class="field-wrap">
+
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  required
+                  aria-required="true"
+                >
+
+                <button
+                  type="button"
+                  class="ai-trigger"
+                  aria-label="Help with email"
+                  onclick="showHint(this, 'Enter an email address you regularly check so Bonvinco can follow up with you.')"
+                >
+                  <i class="fas fa-robot" aria-hidden="true"></i>
+                </button>
+
+                <span
+                  id="emailStatus"
+                  class="field-status"
+                  aria-hidden="true"
+                ></span>
+
+              </div>
+
+              <div
+                id="emailError"
+                class="field-error"
+              >
+                Please enter a valid email address.
+              </div>
+
+            </div>
+
+
+            <!-- Phone -->
+
+            <div class="form-group">
+
+              <label for="cell">
+                Tactical Comms — WhatsApp
+                <span class="required">*</span>
+              </label>
+
+              <div class="field-wrap">
+
+                <input
+                  id="cell"
+                  name="cell"
+                  type="tel"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  placeholder="+27 ..."
+                  required
+                  aria-required="true"
+                >
+
+                <button
+                  type="button"
+                  class="ai-trigger"
+                  aria-label="Help with WhatsApp number"
+                  onclick="showHint(this, 'Enter a WhatsApp-enabled number that can be used for communication.')"
+                >
+                  <i class="fas fa-robot" aria-hidden="true"></i>
+                </button>
+
+                <span
+                  id="cellStatus"
+                  class="field-status"
+                  aria-hidden="true"
+                ></span>
+
+              </div>
+
+              <div
+                id="cellError"
+                class="field-error"
+              >
+                Please enter a valid contact number.
+              </div>
+
+            </div>
+
+
+            <!-- Inquiry -->
+
+            <div class="form-group">
+
+              <label for="message">
+                Inquiry Details
+                <span class="required">*</span>
+              </label>
+
+              <div class="field-wrap">
+
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Describe your security requirements..."
+                  required
+                  minlength="10"
+                  aria-required="true"
+                ></textarea>
+
+                <button
+                  type="button"
+                  class="ai-trigger textarea-ai"
+                  aria-label="Help with inquiry details"
+                  onclick="showHint(this, 'Mention the service you are interested in and provide any important requirements or location details.')"
+                >
+                  <i class="fas fa-robot" aria-hidden="true"></i>
+                </button>
+
+              </div>
+
+              <div
+                id="messageError"
+                class="field-error"
+              >
+                Please provide some details about your inquiry.
+              </div>
+
+            </div>
+
+
+            <!-- Submit -->
+
+            <button
+              id="submitBtn"
+              class="submit-btn"
+              type="submit"
+            >
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              <span>Initialize Secure Chat</span>
+            </button>
+
+
+            <div class="form-note">
+
+              <i class="fas fa-shield-halved" aria-hidden="true"></i>
+
+              <span>
+                Your information is used to prepare your inquiry
+                for communication with Bonvinco Tactical Response.
+              </span>
+
+            </div>
+
+          </form>
+
+        </div>
+
+
+        <!-- Quick WhatsApp -->
+
+        <a
+          class="quick-response"
+          href="https://wa.me/27725938007"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contact Bonvinco Tactical Response on WhatsApp"
+        >
+
+          <div class="quick-response-icon">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          </div>
+
+          <div>
+            <strong>Prefer WhatsApp?</strong>
+
+            <span>
+              Open a direct WhatsApp conversation with Bonvinco.
+            </span>
+          </div>
+
+        </a>
+
+      </section>
+
+
+      <!-- ===================================================
+           DIRECT CONTACT
+      ==================================================== -->
+
+      <aside>
+
+        <section class="card">
+
+          <div class="card-heading">
+
+            <div class="eyebrow">
+              Direct Command Center
+            </div>
+
+            <h2>Reach Bonvinco</h2>
+
+            <p>
+              Use the communication channel most convenient for you.
+            </p>
+
+          </div>
+
+
+          <div class="contact-options">
+
+            <!-- Email -->
+
+            <a
+              class="contact-action"
+              href="mailto:admin@bonvinco.com"
+            >
+
+              <div class="contact-icon">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+              </div>
+
+              <div class="contact-copy">
+                <small>Email</small>
+                <strong>admin@bonvinco.com</strong>
+              </div>
+
+              <i
+                class="fas fa-arrow-up-right-from-square contact-arrow"
+                aria-hidden="true"
+              ></i>
+
+            </a>
+
+
+            <!-- Ermelo -->
+
+            <a
+              class="contact-action"
+              href="tel:+27871494670"
+            >
+
+              <div class="contact-icon">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+              </div>
+
+              <div class="contact-copy">
+                <small>Ermelo</small>
+                <strong>087 149 4670</strong>
+              </div>
+
+              <i
+                class="fas fa-phone contact-arrow"
+                aria-hidden="true"
+              ></i>
+
+            </a>
+
+
+            <!-- Witbank -->
+
+            <a
+              class="contact-action"
+              href="tel:+27836217499"
+            >
+
+              <div class="contact-icon">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+              </div>
+
+              <div class="contact-copy">
+                <small>Witbank</small>
+                <strong>083 621 7499</strong>
+              </div>
+
+              <i
+                class="fas fa-phone contact-arrow"
+                aria-hidden="true"
+              ></i>
+
+            </a>
+
+
+            <!-- WhatsApp -->
+
+            <a
+              class="contact-action whatsapp"
+              href="https://wa.me/27725938007"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div class="contact-icon">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              </div>
+
+              <div class="contact-copy">
+                <small>WhatsApp</small>
+                <strong>Direct WhatsApp Channel</strong>
+              </div>
+
+              <i
+                class="fas fa-arrow-up-right-from-square contact-arrow"
+                aria-hidden="true"
+              ></i>
+
+            </a>
+
+          </div>
+
+
+          <!-- Copy Details -->
+
+          <div style="margin-top: 22px;">
+
+            <div class="copy-row">
+
+              <div class="copy-content">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <span>admin@bonvinco.com</span>
+              </div>
+
+              <button
+                class="copy-btn"
+                type="button"
+                onclick="copyText('admin@bonvinco.com')"
+                aria-label="Copy Bonvinco email address"
+              >
+                <i class="fas fa-copy" aria-hidden="true"></i>
+              </button>
+
+            </div>
+
+
+            <div class="copy-row">
+
+              <div class="copy-content">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <span>087 149 4670</span>
+              </div>
+
+              <button
+                class="copy-btn"
+                type="button"
+                onclick="copyText('0871494670')"
+                aria-label="Copy Ermelo phone number"
+              >
+                <i class="fas fa-copy" aria-hidden="true"></i>
+              </button>
+
+            </div>
+
+
+            <div class="copy-row">
+
+              <div class="copy-content">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <span>083 621 7499</span>
+              </div>
+
+              <button
+                class="copy-btn"
+                type="button"
+                onclick="copyText('0836217499')"
+                aria-label="Copy Witbank phone number"
+              >
+                <i class="fas fa-copy" aria-hidden="true"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- Location -->
+
+          <div class="location-box">
+
+            <div class="location-title">
+              <i class="fas fa-location-dot" aria-hidden="true"></i>
+              Command Center
+            </div>
+
+            <p>
+              14 Kerk Street,<br>
+              Ermelo, 2351,<br>
+              Mpumalanga, South Africa
+            </p>
+
+          </div>
+
+        </section>
+
+
+        <!-- Social -->
+
+        <section class="card social-card">
+
+          <h2>Connect With Bonvinco</h2>
+
+          <p>
+            Follow Bonvinco Tactical Response across social platforms.
+          </p>
+
+          <div class="social-bar">
+
+            <!-- Replace # with official profiles when available -->
+
+            <a
+              href="#"
+              aria-label="Bonvinco Tactical Response on Facebook"
+            >
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+
+            <a
+              href="#"
+              aria-label="Bonvinco Tactical Response on Instagram"
+            >
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+
+            <a
+              href="#"
+              aria-label="Bonvinco Tactical Response on TikTok"
+            >
+              <i class="fab fa-tiktok" aria-hidden="true"></i>
+            </a>
+
+            <a
+              class="whatsapp"
+              href="https://wa.me/27725938007"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Bonvinco Tactical Response on WhatsApp"
+            >
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            </a>
+
+          </div>
+
+        </section>
+
+      </aside>
+
     </div>
 
-    <div class="form-group">
-      <label>Tactical Comms (WhatsApp)</label>
-      <input id="cell" placeholder="+27 ...">
-      <i class="fas fa-robot ai-trigger" onclick="showHint(this, 'Required for rapid mobile coordination.')"></i>
-    </div>
 
-    <div class="form-group">
-      <label>Inquiry Details</label>
-      <textarea id="message" rows="4" placeholder="Describe your security requirements..."></textarea>
-      <i class="fas fa-robot ai-trigger" onclick="showHint(this, 'Mention specific services like Armed Response or K9.')"></i>
-    </div>
+    <!-- FOOTER -->
 
-    <button class="submit-btn" onclick="sendConsult()">Initialize Secure Chat</button>
+    <footer>
+      <strong>Bonvinco Tactical Response</strong>
+      <br>
+      Your Safety. Our Duty.
+    </footer>
+
+  </main>
+
+
+  <!-- =======================================================
+       TOAST
+  ======================================================== -->
+
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  >
+    <i class="fas fa-check-circle" aria-hidden="true"></i>
+    <span id="toastMessage">Copied successfully.</span>
   </div>
 
-  <h2 class="gold" style="font-size: 1.2rem;">Direct Command Center</h2>
-  <div class="card">
-    <div class="reach-item">
-      <div class="reach-left"><i class="fas fa-envelope"></i> admin@bonvinco.com</div>
-      <i class="fas fa-copy copy-btn" onclick="copyText('admin@bonvinco.com')"></i>
-    </div>
-    <div class="reach-item">
-      <div class="reach-left"><i class="fas fa-phone"></i> Ermelo: 087 149 4670</div>
-      <i class="fas fa-copy copy-btn" onclick="copyText('0871494670')"></i>
-    </div>
-    <div class="reach-item">
-      <div class="reach-left"><i class="fas fa-phone"></i> Witbank: 083 621 7499</div>
-      <i class="fas fa-copy copy-btn" onclick="copyText('0836217499')"></i>
-    </div>
-    <div class="reach-item" style="border: none;">
-      <div class="reach-left"><i class="fas fa-map-marker-alt"></i> 14 Kerk Street, Ermelo, 2351</div>
-    </div>
-  </div>
 
-  <div class="social-bar">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-tiktok"></i></a>
-    <a href="https://wa.me/27725938007"><i class="fab fa-whatsapp"></i></a>
-  </div>
-</div>
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
 
-<script>
-  // Drawer Toggle
-  const drawer = document.getElementById('drawer');
-  document.getElementById('drawerToggle').onclick = () => drawer.classList.toggle('open');
+  <script>
 
-  // AI Hints
-  function showHint(el, text) {
-    const existing = el.parentElement.querySelector('.ai-hint');
-    if(existing) existing.remove();
+    /* =======================================================
+       NAVIGATION DRAWER
+    ======================================================== */
 
-    const hint = document.createElement('div');
-    hint.className = 'ai-hint';
-    hint.innerText = text;
-    el.parentElement.appendChild(hint);
-    setTimeout(() => hint.remove(), 3000);
-  }
+    const drawer = document.getElementById("drawer");
+    const drawerToggle = document.getElementById("drawerToggle");
+    const drawerOverlay = document.getElementById("drawerOverlay");
 
-  // Copy Logic
-  function copyText(text) {
-    navigator.clipboard.writeText(text);
-    alert('Information Copied to Clipboard');
-  }
+    function openDrawer() {
 
-  // Submit to WhatsApp
-  function sendConsult() {
-    const n = document.getElementById('fullName').value;
-    const e = document.getElementById('email').value;
-    const c = document.getElementById('cell').value;
-    const m = document.getElementById('message').value;
+      drawer.classList.add("open");
+      drawerOverlay.classList.add("visible");
 
-    if(!n || !e || !c || !m) { alert('All tactical data fields must be filled.'); return; }
+      drawerToggle.classList.add("active");
 
-    const secureMsg = `*BONVINCO TACTICAL INQUIRY*\n---\n*Name:* ${n}\n*Email:* ${e}\n*Contact:* ${c}\n*Request:* ${m}`;
-    window.open(`https://wa.me/27871494670?text=${encodeURIComponent(secureMsg)}`, '_blank');
-  }
-</script>
+      drawerToggle.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+      drawerToggle.setAttribute(
+        "aria-label",
+        "Close navigation menu"
+      );
+
+      drawerToggle.innerHTML =
+        '<i class="fas fa-xmark" aria-hidden="true"></i>';
+
+      document.body.classList.add("drawer-open");
+    }
+
+
+    function closeDrawer() {
+
+      drawer.classList.remove("open");
+      drawerOverlay.classList.remove("visible");
+
+      drawerToggle.classList.remove("active");
+
+      drawerToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      drawerToggle.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+      );
+
+      drawerToggle.innerHTML =
+        '<i class="fas fa-bars" aria-hidden="true"></i>';
+
+      document.body.classList.remove("drawer-open");
+    }
+
+
+    drawerToggle.addEventListener("click", () => {
+
+      if (drawer.classList.contains("open")) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+
+    });
+
+
+    drawerOverlay.addEventListener(
+      "click",
+      closeDrawer
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      (event) => {
+
+        if (
+          event.key === "Escape" &&
+          drawer.classList.contains("open")
+        ) {
+          closeDrawer();
+        }
+
+      }
+    );
+
+
+    document.querySelectorAll(
+      ".drawer-item"
+    ).forEach(link => {
+
+      link.addEventListener(
+        "click",
+        closeDrawer
+      );
+
+    });
+
+
+    /* =======================================================
+       AI HINTS
+    ======================================================== */
+
+    function showHint(element, text) {
+
+      const parent =
+        element.closest(".form-group");
+
+      const existing =
+        parent.querySelector(".ai-hint");
+
+      if (existing) {
+        existing.remove();
+        return;
+      }
+
+      const hint =
+        document.createElement("div");
+
+      hint.className = "ai-hint";
+
+      hint.textContent = text;
+
+      hint.setAttribute(
+        "role",
+        "tooltip"
+      );
+
+      parent.appendChild(hint);
+
+      setTimeout(() => {
+
+        if (hint.parentNode) {
+          hint.remove();
+        }
+
+      }, 4000);
+    }
+
+
+    /* =======================================================
+       TOAST
+    ======================================================== */
+
+    let toastTimer;
+
+    function showToast(message) {
+
+      const toast =
+        document.getElementById("toast");
+
+      const toastMessage =
+        document.getElementById("toastMessage");
+
+      toastMessage.textContent = message;
+
+      toast.classList.add("visible");
+
+      clearTimeout(toastTimer);
+
+      toastTimer = setTimeout(() => {
+
+        toast.classList.remove("visible");
+
+      }, 2800);
+    }
+
+
+    /* =======================================================
+       COPY
+    ======================================================== */
+
+    async function copyText(text) {
+
+      try {
+
+        await navigator.clipboard.writeText(text);
+
+        showToast(
+          "Information copied to clipboard."
+        );
+
+      } catch (error) {
+
+        showToast(
+          "Unable to copy automatically. Please copy it manually."
+        );
+
+      }
+    }
+
+
+    /* =======================================================
+       VALIDATION
+    ======================================================== */
+
+    const fullName =
+      document.getElementById("fullName");
+
+    const email =
+      document.getElementById("email");
+
+    const cell =
+      document.getElementById("cell");
+
+    const message =
+      document.getElementById("message");
+
+
+    function setFieldState(
+      input,
+      statusElement,
+      errorElement,
+      valid,
+      errorMessage
+    ) {
+
+      input.classList.remove(
+        "valid",
+        "invalid"
+      );
+
+      statusElement.classList.remove(
+        "valid",
+        "invalid"
+      );
+
+      statusElement.innerHTML = "";
+
+      errorElement.classList.remove(
+        "visible"
+      );
+
+      if (valid) {
+
+        input.classList.add("valid");
+
+        statusElement.classList.add("valid");
+
+        statusElement.innerHTML =
+          '<i class="fas fa-check" aria-hidden="true"></i>';
+
+      } else {
+
+        input.classList.add("invalid");
+
+        statusElement.classList.add("invalid");
+
+        statusElement.innerHTML =
+          '<i class="fas fa-xmark" aria-hidden="true"></i>';
+
+        errorElement.textContent =
+          errorMessage;
+
+        errorElement.classList.add(
+          "visible"
+        );
+      }
+    }
+
+
+    function validateName() {
+
+      const value =
+        fullName.value.trim();
+
+      const valid =
+        value.length >= 2;
+
+      setFieldState(
+        fullName,
+        document.getElementById("nameStatus"),
+        document.getElementById("nameError"),
+        valid,
+        "Please enter your full name."
+      );
+
+      return valid;
+    }
+
+
+    function validateEmail() {
+
+      const value =
+        email.value.trim();
+
+      const valid =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+          value
+        );
+
+      setFieldState(
+        email,
+        document.getElementById("emailStatus"),
+        document.getElementById("emailError"),
+        valid,
+        "Please enter a valid email address."
+      );
+
+      return valid;
+    }
+
+
+    function validateCell() {
+
+      const value =
+        cell.value.trim();
+
+      const digits =
+        value.replace(/\D/g, "");
+
+      const valid =
+        digits.length >= 9 &&
+        digits.length <= 15;
+
+      setFieldState(
+        cell,
+        document.getElementById("cellStatus"),
+        document.getElementById("cellError"),
+        valid,
+        "Please enter a valid contact number."
+      );
+
+      return valid;
+    }
+
+
+    function validateMessage() {
+
+      const value =
+        message.value.trim();
+
+      const valid =
+        value.length >= 10;
+
+      const error =
+        value.length === 0
+          ? "Please provide details about your inquiry."
+          : "Please provide a little more information about your inquiry.";
+
+      setFieldState(
+        message,
+        {
+          classList: {
+            remove: () => {},
+            add: () => {}
+          },
+          innerHTML: ""
+        },
+        document.getElementById("messageError"),
+        valid,
+        error
+      );
+
+      return valid;
+    }
+
+
+    fullName.addEventListener(
+      "blur",
+      validateName
+    );
+
+    email.addEventListener(
+      "blur",
+      validateEmail
+    );
+
+    cell.addEventListener(
+      "blur",
+      validateCell
+    );
+
+    message.addEventListener(
+      "blur",
+      validateMessage
+    );
+
+
+    /* =======================================================
+       WHATSAPP CONSULTATION
+    ======================================================== */
+
+    document
+      .getElementById("consultForm")
+      .addEventListener(
+        "submit",
+        function(event) {
+
+          event.preventDefault();
+
+          const validName =
+            validateName();
+
+          const validEmail =
+            validateEmail();
+
+          const validCell =
+            validateCell();
+
+          const validMessage =
+            validateMessage();
+
+          if (
+            !validName ||
+            !validEmail ||
+            !validCell ||
+            !validMessage
+          ) {
+
+            showToast(
+              "Please complete all required fields."
+            );
+
+            return;
+          }
+
+
+          const submitBtn =
+            document.getElementById(
+              "submitBtn"
+            );
+
+          const originalHTML =
+            submitBtn.innerHTML;
+
+
+          submitBtn.classList.add(
+            "loading"
+          );
+
+          submitBtn.innerHTML =
+            '<i class="fas fa-circle-notch fa-spin" aria-hidden="true"></i>' +
+            '<span>Preparing Secure Chat...</span>';
+
+
+          const n =
+            fullName.value.trim();
+
+          const e =
+            email.value.trim();
+
+          const c =
+            cell.value.trim();
+
+          const m =
+            message.value.trim();
+
+
+          const secureMsg =
+`*BONVINCO TACTICAL INQUIRY*
+---
+*Name:* ${n}
+*Email:* ${e}
+*Contact:* ${c}
+*Request:* ${m}`;
+
+
+          /*
+            Existing routing preserved from
+            the original page.
+          */
+
+          const whatsappNumber =
+            "27871494670";
+
+
+          setTimeout(() => {
+
+            window.open(
+              `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(secureMsg)}`,
+              "_blank",
+              "noopener,noreferrer"
+            );
+
+
+            submitBtn.classList.remove(
+              "loading"
+            );
+
+            submitBtn.innerHTML =
+              originalHTML;
+
+            showToast(
+              "Secure WhatsApp inquiry prepared."
+            );
+
+          }, 600);
+
+        }
+      );
+
+
+    /* =======================================================
+       LIVE FIELD CLEANUP
+    ======================================================== */
+
+    [fullName, email, cell, message]
+      .forEach(input => {
+
+        input.addEventListener(
+          "input",
+          () => {
+
+            input.classList.remove(
+              "invalid"
+            );
+
+          }
+        );
+
+      });
+
+  </script>
 
 </body>
 </html>
